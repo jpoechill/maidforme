@@ -113,7 +113,7 @@ export default function Home() {
             Message* <br />
             <input type="Subject" className="border px-3 py-2 rounded-lg mt-2 w-full min-w-[500px]" /> <br /><br />
             <button className="bg-[#ECF8F7] w-full text-black rounded p-3 mt-4">
-              Let's talk!
+              Let&apos;s talk!
             </button>
           </div>
         </div>
