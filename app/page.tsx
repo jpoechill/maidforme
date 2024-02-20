@@ -100,7 +100,7 @@ export default function Home() {
             Reach Out to Us for <br /> Exceptional Cleaning Services
           </div>
           <div>
-            Don't hesitate to contact us for top-notch cleaning services. <br />
+            Don&apos;t hesitate to contact us for top-notch cleaning services. <br />
             Our team is ready to provide you with a spotless environment.
           </div>
           <div className="mt-[50px] text-left">
