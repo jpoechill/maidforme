@@ -5,11 +5,11 @@ export default function Home() {
     // B58EBC
     // f2d7e8
     <main>
-      <div className="bg-[#ffd8fc] text-black px-10 py-6 flex justify-between">
+      <div className="bg-[#ffd8fc] sticky top-0 z-10 text-black px-10 py-6 flex flex-col lg:flex-row justify-between">
         <div>
           <Image src="/maidforme.svg" alt="logo" width={220} height={60}></Image>
         </div>
-        <div className="flex flex-row text-[16px] font-medium gap-10 mt-1">
+        <div className="flex flex-row text-[16px] font-medium gap-10 mt-5 lg:mt-1">
           <div>
             About Us
           </div>
@@ -27,7 +27,7 @@ export default function Home() {
           <source src="vaccuum.mov" type="video/mp4" />
         </video>
         <div className="caption h-full text-white">
-          <div className="h-full bg-black bg-opacity-40 px-20 flex flex-col justify-start justify-center">
+          <div className="h-full bg-black bg-opacity-40 px-8 lg:px-20 flex flex-col justify-center">
             <div className="text-[40px] font-bold">
               Professional Cleaning Solutions
             </div>
@@ -43,11 +43,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 my-10 gap-10 py-20 px-20">
-        <div className="col-span-2 justify-center flex">
-          <Image src="/thumb-04.png" className="rounded-xl" alt="logo" width={380} height={60}></Image>
+      <div className="grid grid-cols-6 my-10 gap-10 py-20 px-10 lg:px-20">
+        <div className="col-span-6 lg:col-span-2 justify-center flex">
+          <Image src="/thumb-04.png" className="rounded-xl" alt="logo" width={580} height={10}></Image>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-6 lg:col-span-4">
           <div className="text-[40px] font-bold mb-8">
             Spotless Excellence
           </div>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#ECF8F7] py-20 px-[150px] flex flex-col">
+      <div className="bg-[#ECF8F7] py-[75px] pb-10 lg:py-20 px-10 lg:px-[150px] flex flex-col">
         <div className="text-[40px] text-center font-bold mb-4">
           Our Services
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
             We provide top-notch cleaning services tailored to meet the unique needs of businesses in the Cleaning Services industry. Our team of professionals is committed to delivering exceptional results.
           </div>
         </div>
-        <div className="flex flex-row gap-[50px] justify-between w-full mt-10 pb-10">
+        <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[50px] justify-between w-full lg:mt-10">
           <div className="w-full">
             <Image src="/thumb-05.png" className="rounded-xl" alt="thumb" width="400" height="400" />
             <div className="min-h-[150px] text-[14px]">
@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-center flex py-20 justify-center">
-        <div className="max-w-[900px]">
+        <div className="max-w-[500px] lg:max-w-[900px]">
           <div className="text-[40px] text-center font-bold mb-4">
             Reach Out to Us for <br /> Exceptional Cleaning Services
           </div>
@@ -103,24 +103,24 @@ export default function Home() {
             Don&apos;t hesitate to contact us for top-notch cleaning services. <br />
             Our team is ready to provide you with a spotless environment.
           </div>
-          <div className="mt-[50px] text-left">
+          <div className="mt-[50px] text-left px-5">
             Name* <br />
-            <input type="text" className="border px-3 py-2 rounded-lg mt-2 w-full min-w-[500px]" /> <br /><br />
+            <input type="text" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
             Email* <br />
-            <input type="text" className="border px-3 py-2 rounded-lg mt-2 w-full min-w-[500px]" /> <br /><br />
+            <input type="text" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
             Phone Number* <br />
-            <input type="text" className="border px-3 py-2 rounded-lg mt-2 w-full min-w-[500px]" /> <br /><br />
+            <input type="text" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
             Message* <br />
-            <input type="Subject" className="border px-3 py-2 rounded-lg mt-2 w-full min-w-[500px]" /> <br /><br />
+            <input type="Subject" className="border px-3 border-[#111111] py-2 rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
             <button className="bg-[#ECF8F7] w-full text-black rounded p-3 mt-4">
               Let&apos;s talk!
             </button>
           </div>
         </div>
       </div>
-      <div className="bg-[#ffd8fc] text-black text-[14px] py-20 px-20">
+      <div className="bg-[#ffd8fc] text-black text-[14px] py-12 lg:py-15 px-5 lg:px-20">
         <div className="grid grid-cols-6 gap-4">
-          <div className="col-span-3">
+          <div className="col-span-6 lg:col-span-3">
             <span className="text-[16px]">
               Sparkling cleanliness at your service, anytime, anywhere!
             </span>
@@ -130,7 +130,7 @@ export default function Home() {
               <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" /></svg>
             </div>
           </div>
-          <div className="">
+          <div className="mt-5 lg:mt-0 col-span-3 lg:col-span-1">
             <span className="font-bold">
               Menu
             </span>
@@ -139,18 +139,17 @@ export default function Home() {
             Our Services <br /><br />
             Contact Us
           </div>
-          <div className="">
+          <div className="mt-5 lg:mt-0 col-span-3 lg:col-span-1">
             <span className="font-bold">
               Contact Us
             </span>
-
             <br /><br />
             hello@maidforme.co
             <br /><br />
             510-555-1234
           </div>
         </div>
-        <div className="mt-10 text-sm">
+        <div className="mt-10 pt-10 text-sm">
           2024 © Maid For Me. All rights reserved.
         </div>
       </div>
