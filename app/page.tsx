@@ -89,21 +89,21 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[50px] justify-between w-full lg:mt-10">
-          <div className="w-full">
+          <div className="w-full mb-5 md:mb-0">
             <Image src="/thumb-05.png" className="rounded-xl" alt="thumb" width="400" height="400" />
             <div className="min-h-[150px]">
               <div className="font-bold my-5">Commercial Cleaning</div>
               Our Commercial Cleaning service ensures a spotless, well-maintained business environment. We use eco-friendly products and advanced cleaning techniques for optimal results.
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full mb-5 md:mb-0">
             <Image src="/thumb-02.png" className="rounded-xl" alt="thumb" width="400" height="400" />
             <div className="min-h-[150px]">
               <div className="font-bold my-5">Residential Cleaning</div>
               Our Residential Cleaning service offers thorough, customized cleaning solutions for homes. We prioritize your comfort and satisfaction, ensuring every corner is spotless.
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full mb-5 md:mb-0">
             <Image src="/thumb-03.png" className="rounded-xl" alt="thumb" width="400" height="400" />
             <div className="min-h-[150px]">
               <div className="font-bold my-5">Deep Cleaning</div>
