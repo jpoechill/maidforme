@@ -139,7 +139,9 @@ export default function Home() {
       </div>
       <div className="bg-[#ffd8fc] text-black text-[14px] py-12 lg:py-15 px-5 lg:px-20">
         <div className="grid grid-cols-6 gap-4">
-          <div className="col-span-6 lg:col-span-3">
+          <div className="col-span-6 lg:col-span-3 mb-5">
+
+            <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-3" src="/maidforme.svg" alt="logo" width={220} height={60}></Image>
             <span className="text-[16px]">
               Sparkling cleanliness at your service, anytime, anywhere!
             </span>
