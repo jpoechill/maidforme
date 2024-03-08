@@ -158,9 +158,7 @@ export default function Home() {
             <br /><br />
 
             <span onClick={() => scrolltoHash('about-us')} className="cursor-pointer">About Us</span><br /><br />
-
             <span onClick={() => scrolltoHash('our-services')} className="cursor-pointer">Our Services</span><br /><br />
-
             <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer">Contact Us</span>
           </div>
           <div className="mt-5 lg:mt-0 col-span-3 lg:col-span-1">
@@ -168,9 +166,9 @@ export default function Home() {
               Contact Us
             </span>
             <br /><br />
-            maidforme@rith.com
+            hello@maidforme.com
             <br /><br />
-            510-555-1234
+            510-603-7272
           </div>
         </div>
         <div className="mt-10 pt-10 text-sm">
