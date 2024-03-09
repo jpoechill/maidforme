@@ -23,18 +23,18 @@ export default function Home() {
     <main id="top">
       <div className="bg-[#ffd8fc] sticky top-0 z-10 text-black px-10 py-6 flex flex-row justify-between h-[80px]">
         <div>
-          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.svg" alt="logo" width={220} height={60}></Image>
-          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.svg" alt="logo" width={50} height={50}></Image>
+          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
+          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image>
         </div>
-        <div className="flex flex-row text-[16px] font-medium gap-10 mt-1 lg:mt-2 lg:mt-1">
+        <div className="flex flex-row text-[16px] text-[#C41C94] font-medium gap-10 mt-1 lg:mt-2">
           <div>
-            <span onClick={() => scrolltoHash('about-us')} className="cursor-pointer">About Us</span>
+            <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer">About Us</span>
           </div>
           <div>
-            <span onClick={() => scrolltoHash('our-services')} className="cursor-pointer">Our Services</span>
+            <span onClick={() => scrolltoHash('our-services')} className="hover:underline cursor-pointer">Our Services</span>
           </div>
           <div>
-            <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer">Contact Us</span>
+            <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer">Contact Us</span>
           </div>
         </div>
       </div>
@@ -141,8 +141,8 @@ export default function Home() {
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-6 lg:col-span-3 mb-5">
 
-            <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-3" src="/maidforme.svg" alt="logo" width={220} height={60}></Image>
-            <span className="text-[16px]">
+            <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-3" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
+            <span className="text-[16px] text-[#C41C94]">
               Sparkling cleanliness at your service, anytime, anywhere!
             </span>
             <div className="flex flex-row gap-5 mt-3">
@@ -157,18 +157,19 @@ export default function Home() {
             </span>
             <br /><br />
 
-            <span onClick={() => scrolltoHash('about-us')} className="cursor-pointer">About Us</span><br /><br />
-            <span onClick={() => scrolltoHash('our-services')} className="cursor-pointer">Our Services</span><br /><br />
-            <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer">Contact Us</span>
+            <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer text-[#C41C94]">About Us</span><br /><br />
+            <span onClick={() => scrolltoHash('our-services')} className="hover:underline cursor-pointer text-[#C41C94]">Our Services</span><br /><br />
+            <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer text-[#C41C94]">Contact Us</span>
           </div>
           <div className="mt-5 lg:mt-0 col-span-3 lg:col-span-1">
             <span className="font-bold">
               Contact Us
             </span>
             <br /><br />
-            hello@maidforme.com
+            <span className="text-[#C41C94]">hello@maidforme.com</span>
             <br /><br />
-            510-603-7272
+            <span className="text-[#C41C94]">510-603-7272</span>
+            
           </div>
         </div>
         <div className="mt-10 pt-10 text-sm">
