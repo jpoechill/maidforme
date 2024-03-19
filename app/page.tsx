@@ -77,7 +77,7 @@ export default function Home() {
           <source src="vaccuum.mov" type="video/mp4" />
         </video>
         <div className="caption h-full text-white">
-          <div className="h-full bg-black bg-opacity-40 px-8 lg:px-20 flex flex-col justify-center">
+          <div className="h-full bg-black bg-opacity-40 px-5 md:px-10 lg:px-20 flex flex-col justify-center">
             <div className="text-[40px] font-bold">
               Professional Cleaning Solutions
             </div>
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="about-us" className="grid grid-cols-6 mt-5 my-10 gap-10 py-[50px] px-10 lg:px-20">
+      <div id="about-us" className="grid grid-cols-6 mt-5 my-10 gap-10 py-[50px] px-5 md:px-10 lg:px-20">
         <div id="about-us-mobile" className="col-span-6 pt-5 lg:col-span-2 justify-center flex">
           <Image src="/thumb-04.png" className="rounded-xl w-full" alt="logo" width={580} height={10}></Image>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="our-services" className="bg-[#fff5fe] py-[75px] pb-10 lg:pt-10 lg:pb-20 px-10 lg:px-[150px] flex flex-col">
+      <div id="our-services" className="bg-[#fff5fe] py-[75px] pb-10 lg:pt-10 lg:pb-20 px-5 md:px-10 lg:px-[150px] flex flex-col">
         <div id="our-services-mobile" className="text-[40px] text-center pt-10 font-bold mb-4">
           Our Services
         </div>
