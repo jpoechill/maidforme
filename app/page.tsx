@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from 'react';
+
 
 export default function Home() {
   // let's make a function that receive the specific element_id as string and scroll into that element_id
@@ -17,16 +19,24 @@ export default function Home() {
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
+  const [showMenu, setShowMenu] = useState(false);
+
+  function toggleMenu() {
+
+  }
+
   return (
     // B58EBC
     // f2d7e8
     <main id="top">
-      <div className="bg-[#ffdbfc] sticky top-0 z-10 text-black px-10 py-6 flex flex-row justify-between h-[80px]">
+      
+
+      <div className="fixed bg-[#ffdbfc] w-full z-10 text-black px-10 py-6 flex flex-row justify-between h-[80px]">
         <div>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image>
         </div>
-        <div className="flex flex-row text-[16px] text-[#C41C94] font-medium gap-10 mt-1 lg:mt-2">
+        <div className="hidden md:flex flex-row text-[16px] text-[#C41C94] font-medium gap-10 mt-1 lg:mt-2">
           <div>
             <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer">About Us</span>
           </div>
@@ -37,7 +47,30 @@ export default function Home() {
             <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer">Contact Us</span>
           </div>
         </div>
+        <div className="cursor-pointer md:hidden" onClick={() => {setShowMenu(!showMenu)}}>
+          <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
+        </div>
+
+        
       </div>
+
+        {
+          showMenu &&
+          <div className="fixed md:hidden shadow-sm pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
+            <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
+              <div>
+                <span onClick={() => {scrolltoHash('about-us-mobile'); setShowMenu(false)}} className="hover:underline cursor-pointer">About Us</span>
+              </div> <br />
+              <div>
+                <span onClick={() => {scrolltoHash('our-services-mobile'); setShowMenu(false)}} className="hover:underline cursor-pointer">Our Services</span>
+              </div> <br />
+              <div>
+                <span onClick={() => {scrolltoHash('contact-us-mobile'); setShowMenu(false)}} className="hover:underline cursor-pointer">Contact Us</span>
+              </div>
+            </div>
+          </div>
+        }
+      
 
       <div className="video-container">
         <video autoPlay muted loop>
@@ -61,8 +94,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="about-us" className="grid grid-cols-6 my-10 gap-10 py-20 px-10 lg:px-20">
-        <div className="col-span-6 lg:col-span-2 justify-center flex">
+      <div id="about-us" className="grid grid-cols-6 mt-5 my-10 gap-10 py-[50px] px-10 lg:px-20">
+        <div id="about-us-mobile" className="col-span-6 pt-5 lg:col-span-2 justify-center flex">
           <Image src="/thumb-04.png" className="rounded-xl w-full" alt="logo" width={580} height={10}></Image>
         </div>
         <div className="col-span-6 lg:col-span-4">
@@ -79,8 +112,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="our-services" className="bg-[#fff5fe] py-[75px] pb-10 lg:py-20 px-10 lg:px-[150px] flex flex-col">
-        <div className="text-[40px] text-center font-bold mb-4">
+      <div id="our-services" className="bg-[#fff5fe] py-[75px] pb-10 lg:pt-10 lg:pb-20 px-10 lg:px-[150px] flex flex-col">
+        <div id="our-services-mobile" className="text-[40px] text-center pt-10 font-bold mb-4">
           Our Services
         </div>
         <div className="flex justify-center mb-10">
@@ -113,8 +146,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact-us" className="text-center flex py-20 justify-center">
-        <div className="max-w-[500px] lg:max-w-[900px]">
+      <div id="contact-us" className="text-center flex pt-10 pb-20 justify-center">
+        <div id="contact-us-mobile" className="pt-10 max-w-[500px] lg:max-w-[900px]">
           <div className="text-[40px] text-center font-bold mb-4">
             Reach Out to Us for <br className="sm:none" /> Exceptional Cleaning Services
           </div>
