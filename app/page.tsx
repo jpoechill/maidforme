@@ -166,7 +166,7 @@ export default function Home() {
               Contact Us
             </span>
             <br /><br />
-            <span className="text-[#C41C94]">hello@maidforme.com</span>
+            <span className="text-[#C41C94]">hello@maidforme.co</span>
             <br /><br />
             <span className="text-[#C41C94]">510-603-7272</span>
             
