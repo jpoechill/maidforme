@@ -149,7 +149,7 @@ export default function Home() {
       <div id="contact-us" className="text-center flex pt-10 pb-20 justify-center">
         <div id="contact-us-mobile" className="pt-10 max-w-[500px] lg:max-w-[900px]">
           <div className="text-[40px] text-center font-bold mb-4">
-            Reach Out to Us for <br className="sm:none" /> Exceptional Cleaning Services
+            Reach Out to Us for <br className="sm:hidden" /> Exceptional Cleaning Services
           </div>
           <div>
             Don&apos;t hesitate to contact us for top-notch cleaning services. <br className="sm:none" />
