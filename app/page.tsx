@@ -31,7 +31,7 @@ export default function Home() {
     <main id="top">
       
 
-      <div className="fixed bg-[#ffdbfc] w-full z-10 text-black px-10 py-6 flex flex-row justify-between h-[80px]">
+      <div className="fixed bg-[#ffdbfc] w-full z-10 text-black px-5 md:px-10 py-6 flex flex-row justify-between h-[80px]">
         <div>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image>
@@ -170,7 +170,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#ffdbfc] text-black text-[14px] py-12 lg:py-15 px-10">
+
+      <div className="bg-[#ffdbfc] text-black text-[14px] py-12 lg:py-15 px-5 md:px-10">
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-6 lg:col-span-3 mb-5">
 
