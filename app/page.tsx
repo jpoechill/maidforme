@@ -152,7 +152,7 @@ export default function Home() {
             Reach Out to Us for <br className="sm:hidden" /> Exceptional Cleaning Services
           </div>
           <div>
-            Don&apos;t hesitate to contact us for top-notch cleaning services. <br className="sm:none" />
+            Don&apos;t hesitate to contact us for top-notch cleaning services. <br className="sm:hidden" />
             Our team is ready to provide you with a spotless environment.
           </div>
           <div className="mt-[50px] text-left px-5">
