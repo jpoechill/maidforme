@@ -50,28 +50,26 @@ export default function Home() {
         <div className="cursor-pointer md:hidden" onClick={() => {setShowMenu(!showMenu)}}>
           <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
         </div>
-
-        
       </div>
 
-        {
-          showMenu &&
-          <div className="fixed md:hidden shadow-sm pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
-            <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
-              <div>
-                <span onClick={() => {scrolltoHash('about-us-mobile'); setShowMenu(false)}} className="hover:underline cursor-pointer">About Us</span>
-              </div> <br />
-              <div>
-                <span onClick={() => {scrolltoHash('our-services-mobile'); setShowMenu(false)}} className="hover:underline cursor-pointer">Our Services</span>
-              </div> <br />
-              <div>
-                <span onClick={() => {scrolltoHash('contact-us-mobile'); setShowMenu(false)}} className="hover:underline cursor-pointer">Contact Us</span>
-              </div>
+      {/* Mobile Menu */}
+      {
+        showMenu &&
+        <div className="fixed md:hidden shadow-sm pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
+          <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
+            <div onClick={() => {scrolltoHash('about-us-mobile'); setShowMenu(false)}} className="w-100 p-3 hover:underline cursor-pointer">
+              <span>About Us</span>
+            </div> <br />
+            <div  onClick={() => {scrolltoHash('our-services-mobile'); setShowMenu(false)}} className="w-100 p-3 hover:underline cursor-pointer">
+              <span>Our Services</span>
+            </div> <br />
+            <div onClick={() => {scrolltoHash('contact-us-mobile'); setShowMenu(false)}} className="w-100 p-3 hover:underline cursor-pointer">
+              <span>Contact Us</span>
             </div>
           </div>
-        }
+        </div>
+      }
       
-
       <div className="video-container">
         <video autoPlay muted loop>
           <source src="vaccuum.mov" type="video/mp4" />
