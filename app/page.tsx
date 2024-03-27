@@ -19,7 +19,6 @@ export default function Home() {
 
   const form = useRef<HTMLFormElement | null>(null)
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    // alert('Cats')
       e.preventDefault();
       if (form.current) {
           emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
@@ -35,11 +34,7 @@ export default function Home() {
   };
 
   return (
-    // B58EBC
-    // f2d7e8
     <main id="top">
-      
-
       <div className="fixed bg-[#ffdbfc] w-full z-10 text-black px-5 md:px-10 py-6 flex flex-row justify-between h-[80px]">
         <div>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
@@ -179,25 +174,6 @@ export default function Home() {
           </form>
         </div>
       </div>
-
-      {/* <div>
-            <form ref={form} onSubmit={sendEmail}>
-                <div className='bg-white w-full flex flex-col items-center justify-center pt-0 p-10 lg:pt-0 lg:pb-[100px] lg:p-20 pb-[110px]'>
-                    <h1 className='text-[36px] font-medium'>Contact Us </h1><br />
-                    <div className='text-[16px] font-light w-full lg:w-[1000px]'>
-                        Name <br />
-                        <input type="text" name="user_name" className='border w-full mt-2 mb-4 rounded-lg p-3' /> <br />
-                        Email or (Phone Number)<br />
-                        <input type="text" name="user_email" className='border w-full mt-2 mb-4 rounded-lg p-3' /> <br />
-                        Message  <br />
-                        <textarea rows={4} name="comment" id="comment" className="border rounded-lg p-2 w-full"></textarea>
-                        <button className='border bg-[#316D80] text-white rounded-lg w-full mt-4 p-3'>
-                            Send Inquiry
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div > */}
 
       <div className="bg-[#ffdbfc] text-black text-[14px] py-12 lg:py-15 px-5 md:px-10">
         <div className="grid grid-cols-6 gap-4">
