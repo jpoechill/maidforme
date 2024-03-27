@@ -19,28 +19,28 @@ export default function Home() {
 
   const form = useRef<HTMLFormElement | null>(null)
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      if (form.current) {
-          emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
-              .then((result) => {
-                  console.log(result.text);
-              }, (error) => {
-                  console.log(error.text);
-              });
-          alert('Message sent successfully!')
-          form.current.reset()
-          scrolltoHash('top')
-      }
+    e.preventDefault();
+    if (form.current) {
+      emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+      alert('Message sent successfully!')
+      form.current.reset()
+      scrolltoHash('top')
+    }
   };
 
   return (
     <main id="top">
-      <div className="fixed bg-[#ffdbfc] w-full z-10 text-black px-5 md:px-10 py-6 flex flex-row justify-between h-[80px]">
+      <div className="fixed bg-[#ffdbfc] w-full z-10 text-black px-5 md:px-10 py-6 flex flex-row items-center justify-between h-[80px]">
         <div>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image>
         </div>
-        <div className="hidden md:flex flex-row text-[16px] text-[#C41C94] font-medium gap-10 mt-1 lg:mt-2">
+        <div className="hidden md:flex flex-row text-[16px] text-[#C41C94] items-center font-medium gap-10">
           <div>
             <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer">About Us</span>
           </div>
@@ -50,8 +50,13 @@ export default function Home() {
           <div>
             <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer">Contact Us</span>
           </div>
+          <a href="tel:5106037272">
+            <button className="bg-[#C41C94] w-full text-white rounded p-3 px-4">
+              Call Now
+            </button>
+          </a>
         </div>
-        <div className="cursor-pointer md:hidden" onClick={() => {setShowMenu(!showMenu)}}>
+        <div className="cursor-pointer md:hidden" onClick={() => { setShowMenu(!showMenu) }}>
           <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
         </div>
       </div>
@@ -61,19 +66,19 @@ export default function Home() {
         showMenu &&
         <div className="fixed md:hidden shadow-sm pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
-            <div onClick={() => {scrolltoHash('about-us-mobile'); setShowMenu(false)}} className="w-100 p-3 hover:underline cursor-pointer">
+            <div onClick={() => { scrolltoHash('about-us-mobile'); setShowMenu(false) }} className="w-100 p-3 hover:underline cursor-pointer">
               <span>About Us</span>
             </div> <br />
-            <div  onClick={() => {scrolltoHash('our-services-mobile'); setShowMenu(false)}} className="w-100 p-3 hover:underline cursor-pointer">
+            <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 p-3 hover:underline cursor-pointer">
               <span>Our Services</span>
             </div> <br />
-            <div onClick={() => {scrolltoHash('contact-us-mobile'); setShowMenu(false)}} className="w-100 p-3 hover:underline cursor-pointer">
+            <div onClick={() => { scrolltoHash('contact-us-mobile'); setShowMenu(false) }} className="w-100 p-3 hover:underline cursor-pointer">
               <span>Contact Us</span>
             </div>
           </div>
         </div>
       }
-      
+
       <div className="video-container">
         <video autoPlay muted loop>
           <source src="vaccuum.mov" type="video/mp4" />
@@ -206,8 +211,9 @@ export default function Home() {
             <br /><br />
             <span className="text-[#C41C94]">hello@maidforme.co</span>
             <br /><br />
-            <span className="text-[#C41C94]">510-603-7272</span>
-            
+            <a href="tel:5106037272">
+              <span className="text-[#C41C94]">510-603-7272</span>
+            </a>
           </div>
         </div>
         <div className="mt-10 pt-10 text-sm">
