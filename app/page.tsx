@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <main id="top">
-      <div className="fixed bg-[#fff5fe] w-full z-10 text-black px-5 md:px-10 py-6 flex flex-row items-center justify-between h-[80px]">
+      <div className="fixed bg-[#fff5fe] w-full z-10 text-black px-5 md:px-10 py-6 top-0 flex flex-row items-center justify-between h-[80px]">
         <div>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image>
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       }
 
-      <div className="video-container">
+      <div className="video-container mt-10">
         <video autoPlay muted loop>
           <source src="vaccuum.mov" type="video/mp4" />
         </video>
