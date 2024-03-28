@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <main id="top">
-      <div className="fixed bg-[#ffdbfc] w-full z-10 text-black px-5 md:px-10 py-6 flex flex-row items-center justify-between h-[80px]">
+      <div className="fixed bg-[#fff5fe] w-full z-10 text-black px-5 md:px-10 py-6 flex flex-row items-center justify-between h-[80px]">
         <div>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image>
@@ -95,13 +95,12 @@ export default function Home() {
               <button className="bg-[#ffd8fc] text-black rounded p-3 mt-4">
                 <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer text-[#C41C94] font-medium">Contact Us</span>
               </button>
-
             </div>
           </div>
         </div>
       </div>
 
-      <div id="about-us" className="grid grid-cols-6 mt-5 my-10 gap-10 py-[50px] px-5 md:px-10 lg:px-20">
+      <div id="about-us" className="grid grid-cols-6 my-20 gap-10 py-[50px] px-5 md:px-10 lg:px-20">
         <div id="about-us-mobile" className="col-span-6 pt-5 lg:col-span-2 justify-center flex">
           <Image src="/thumb-04.png" className="rounded-xl w-full" alt="logo" width={580} height={10}></Image>
         </div>
@@ -153,8 +152,70 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact-us" className="text-center flex pt-10 pb-20 justify-center">
-        <div id="contact-us-mobile" className="pt-10 max-w-[500px] lg:max-w-[900px]">
+
+      <div id="testimonials" className="text-center flex py-20 justify-center">
+        <div id="testimonials-mobile" className=" pt-5 pb-10 max-w-[500px] lg:max-w-[1200px]">
+          <div className="uppercase font-bold text-[#C41C94]">
+            Testimonials
+          </div>
+          <div className="text-[40px] text-center font-bold mb-10">
+            Voices of Satisfied Customers
+          </div>
+          <div className="grid grid-cols-3 gap-10">
+            <div>
+              <div className="bg-[#F9FAFB] rounded-xl text-sm p-7 text-left">
+                Maid For Me has been an absolute lifesaver! Their attention to detail and thoroughness in cleaning our home is unmatched. We&apos;ve tried other cleaning services in the past, but Maid For Me truly stands out. Their professionalism and reliability make them our go-to choice every time.
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/female-01.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <span className="font-sans font-bold text-sm pl-5">
+                    Sarah M.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="bg-[#F9FAFB] rounded-xl text-sm p-7 text-left">
+                For busy professionals like me, this cleaning service is a lifesaver. Trustworthy, reliable, and they always leave my home sparkling clean.
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/male-02.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <span className="font-sans font-bold text-sm pl-5">
+                    John D.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="bg-[#F9FAFB] rounded-xl text-sm p-7 text-left">
+                As a busy professional, finding time to keep my home clean was always a challenge until I discovered Maid For Me. Their team is incredibly trustworthy, and I feel comfortable leaving them to clean while I'm at work. Coming home to a sparkling clean house is such a relief, and I'm grateful for their exceptional service.
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/female-03.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <span className="font-sans font-bold text-sm pl-5">
+                    Emily R.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="location" className=" text-center bg-[#fff5fe] gap-20 flex py-[120px] justify-center">
+        <div className="w-1/2 flex justify-end">
+          <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} height={450} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div className="w-1/2 flex justify-left text-left">
+          <div className="max-w-[500px] leading-7">
+            <span className="text-4xl font-bold">Find Us Here! </span>
+            <br /><br />
+            Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area. Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection. Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!</div>
+        </div>
+      </div>
+
+      <div id="contact-us" className="text-center bg-white flex pt-20 pb-20 justify-center">
+        <div id="contact-us-mobile" className="pt-10 pb-10 max-w-[500px] lg:max-w-[900px]">
           <div className="text-[40px] text-center font-bold mb-4">
             Reach Out to Us for <br className="hidden md:block" /> Exceptional Cleaning Services
           </div>
@@ -172,7 +233,7 @@ export default function Home() {
               <input type="text" name="user_phone" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
               Message* <br />
               <input type="Subject" name="user_message" className="border px-3 border-[#111111] py-2 rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-              <button className="bg-[#ECF8F7] w-full text-black rounded p-3 mt-4">
+              <button className="bg-[#5AC8FA] w-full text-white rounded p-3 mt-4">
                 Let&apos;s talk!
               </button>
             </div>
@@ -180,7 +241,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#ffdbfc] text-black text-[14px] py-12 lg:py-15 px-5 md:px-10">
+      <div className="bg-[#fff5fe] text-black text-[14px] py-12 lg:py-15 px-5 md:px-10">
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-6 lg:col-span-3 mb-5">
 
