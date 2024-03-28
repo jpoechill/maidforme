@@ -168,7 +168,7 @@ export default function Home() {
       </div>
 
 
-      <div id="testimonials" className="text-center flex px-20 py-20 justify-center">
+      <div id="testimonials" className="text-center flex px-5 md:px-20 py-20 justify-center">
         <div id="testimonials-mobile" className=" pt-5 pb-10 max-w-[500px] lg:max-w-[1200px]">
           <div className="uppercase font-bold text-[#C41C94]">
             Testimonials
@@ -237,7 +237,7 @@ export default function Home() {
         <span className="text-lg text-gray-700"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo earum quos voluptatum tempore quis exercitationem, ad officiis dolorum temporibus veritatis quod itaque repellendus molestiae culpa laboriosam, cupiditate voluptate. Eius, placeat! </span>
       </div> */}
 
-      <div className="text-center bg-white flex-col flex mb-10 pt-10 pb-20 justify-center">
+      <div className="text-center bg-white flex-col flex mb-10 px-5 pt-10 pb-20 justify-center">
         <div id="gallery" className="text-[40px] text-center pt-10 font-bold mb-4">
           Photo Gallery
         </div>
@@ -253,7 +253,7 @@ export default function Home() {
           <div className="overflow-hidden h-[200px] rounded-xl">
             <Image src="/gallery/gallery_05.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
-          <div className="overflow-hidden h-[200px] rounded-xl">
+          <div className="overflow-hidden hidden md:block h-[200px] rounded-xl">
             <Image src="/gallery/gallery_10.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
         </div>
@@ -264,10 +264,10 @@ export default function Home() {
           <div className="overflow-hidden h-[200px] rounded-xl">
             <Image src="/gallery/gallery_04.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
-          <div className="overflow-hidden h-[200px] rounded-xl">
+          <div className="overflow-hidden hidden md:block h-[200px] rounded-xl">
             <Image src="/gallery/gallery_03.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
-          <div className="overflow-hidden h-[200px] rounded-xl">
+          <div className="overflow-hidden hidden md:block h-[200px] rounded-xl">
             <Image src="/gallery/gallery_06.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
         </div>
