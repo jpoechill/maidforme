@@ -161,7 +161,7 @@ export default function Home() {
           <div className="text-[40px] text-center font-bold mb-10">
             Voices of Satisfied Customers
           </div>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-10">
             <div>
               <div className="bg-[#F9FAFB] rounded-xl text-sm p-7 text-left">
                 Maid For Me has been an absolute lifesaver! Their attention to detail and thoroughness in cleaning our home is unmatched. We&apos;ve tried other cleaning services in the past, but Maid For Me truly stands out. Their professionalism and reliability make them our go-to choice every time.
@@ -187,7 +187,7 @@ export default function Home() {
 
             <div>
               <div className="bg-[#F9FAFB] rounded-xl text-sm p-7 text-left">
-                As a busy professional, finding time to keep my home clean was always a challenge until I discovered Maid For Me. Their team is incredibly trustworthy, and I feel comfortable leaving them to clean while I'm at work. Coming home to a sparkling clean house is such a relief, and I'm grateful for their exceptional service.
+                As a busy professional, finding time to keep my home clean was always a challenge until I discovered Maid For Me. Their team is incredibly trustworthy, and I feel comfortable leaving them to clean while I&apos;m at work. Coming home to a sparkling clean house is such a relief, and I&apos;m grateful for their exceptional service.
                 <div className="flex flex-row items-center mt-7">
                   <Image src="/avatars/female-03.jpeg" alt="" className="rounded-full" width={60} height={60} />
                   <span className="font-sans font-bold text-sm pl-5">
