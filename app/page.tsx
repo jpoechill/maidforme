@@ -48,6 +48,12 @@ export default function Home() {
             <span onClick={() => scrolltoHash('our-services')} className="hover:underline cursor-pointer">Our Services</span>
           </div>
           <div>
+            <span onClick={() => scrolltoHash('testimonials')} className="hover:underline cursor-pointer">Testimonials</span>
+          </div>
+          <div>
+            <span onClick={() => scrolltoHash('gallery')} className="hover:underline cursor-pointer">Gallery</span>
+          </div>
+          <div>
             <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer">Contact Us</span>
           </div>
           <a href="tel:5106037272">
@@ -66,14 +72,23 @@ export default function Home() {
         showMenu &&
         <div className="fixed md:hidden shadow-sm pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
-            <div onClick={() => { scrolltoHash('about-us-mobile'); setShowMenu(false) }} className="w-100 p-3 hover:underline cursor-pointer">
+            <div onClick={() => { scrolltoHash('about-us-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
               <span>About Us</span>
             </div> <br />
-            <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 p-3 hover:underline cursor-pointer">
+            <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
               <span>Our Services</span>
             </div> <br />
-            <div onClick={() => { scrolltoHash('contact-us-mobile'); setShowMenu(false) }} className="w-100 p-3 hover:underline cursor-pointer">
+            <div onClick={() => { scrolltoHash('testimonials'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              <span>Testimonials</span>
+            </div> <br />
+            <div onClick={() => { scrolltoHash('gallery'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              <span>Gallery</span>
+            </div> <br />
+            <div onClick={() => { scrolltoHash('contact-us'); setShowMenu(false) }} className="w-100 pb-0  hover:underline cursor-pointer">
               <span>Contact Us</span>
+            </div> <br />
+            <div onClick={() => { setShowMenu(false) }} className="w-full bg-[#C41C94] text-white text-center p-5 rounded-2xl hover:underline cursor-pointer">
+              <span>Call Now</span>
             </div>
           </div>
         </div>
@@ -92,7 +107,7 @@ export default function Home() {
               Experience top-notch dusting, sanitizing, and vacuuming services with our professional cleaning team.
             </div>
             <div>
-              <button className="bg-[#ffd8fc] text-black rounded p-3 mt-4">
+              <button className="bg-[#fff5fe] rounded p-3 px-5 mt-4">
                 <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer text-[#C41C94] font-medium">Contact Us</span>
               </button>
             </div>
@@ -153,7 +168,7 @@ export default function Home() {
       </div>
 
 
-      <div id="testimonials" className="text-center flex py-20 justify-center">
+      <div id="testimonials" className="text-center flex px-20 py-20 justify-center">
         <div id="testimonials-mobile" className=" pt-5 pb-10 max-w-[500px] lg:max-w-[1200px]">
           <div className="uppercase font-bold text-[#C41C94]">
             Testimonials
@@ -200,13 +215,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="location" className=" text-center bg-[#fff5fe] gap-20 flex py-[120px] justify-center">
-        <div className="w-1/2 flex justify-end">
+      <div id="location" className="text-center bg-[#fff5fe] gap-20 flex flex-col md:flex-row py-[120px] justify-center">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} height={450} loading="lazy"></iframe>
           </div>
         </div>
-        <div className="w-1/2 flex justify-left text-left">
+        <div className="w-full md:w-1/2 flex justify-center pt-0 p-10 md:p-0 md:justify-left text-left">
           <div className="max-w-[500px] leading-7">
             <span className="text-4xl font-bold">Find Us Here! </span>
             <br /><br />
@@ -214,8 +229,66 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact-us" className="text-center bg-white flex pt-20 pb-20 justify-center">
-        <div id="contact-us-mobile" className="pt-10 pb-10 max-w-[500px] lg:max-w-[900px]">
+      {/* <div className="text-center m-20 border-2 rounded-md">
+        <div className="h-min overflow-hidden rounded-md">
+          <img className="hover:scale-[1.05] transition-all duration-500 cursor-pointer" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
+        </div>
+        <h3 className="text-3xl py-4">Our Mission</h3>
+        <span className="text-lg text-gray-700"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo earum quos voluptatum tempore quis exercitationem, ad officiis dolorum temporibus veritatis quod itaque repellendus molestiae culpa laboriosam, cupiditate voluptate. Eius, placeat! </span>
+      </div> */}
+
+      <div className="text-center bg-white flex-col flex mb-10 pt-10 pb-20 justify-center">
+        <div id="gallery" className="text-[40px] text-center pt-10 font-bold mb-4">
+          Photo Gallery
+        </div>
+        <div className="flex justify-center mb-10">
+          <div className="flex max-w-[750px] px-10 text-center">
+            Discover spotless perfection in our photo gallery. See how we transform spaces with expert cleaning. Let the images inspire your home&apos;s next level of cleanliness.
+          </div>
+        </div>
+        <div className="flex flex-row justify-center hover:cursor-pointer gap-3">
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_01.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={500} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_05.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_10.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+        </div>
+        <div className="flex flex-row justify-center hover:cursor-pointer gap-3 mt-3">
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_02.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_04.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_03.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_06.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+        </div>
+        {/* <div className="flex flex-row justify-center hover:cursor-pointer gap-3 mt-3">
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_05.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={500} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_06.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_07.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+          <div className="overflow-hidden h-[200px] rounded-xl">
+            <Image src="/gallery/gallery_08.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
+          </div>
+        </div> */}
+      </div>
+
+      <div className="text-center bg-[#F9FAFB] flex pt-20 pb-20 justify-center">
+        <div id="contact-us" className="pt-10 pb-10 max-w-[500px] lg:max-w-[900px]">
           <div className="text-[40px] text-center font-bold mb-4">
             Reach Out to Us for <br className="hidden md:block" /> Exceptional Cleaning Services
           </div>
@@ -224,22 +297,17 @@ export default function Home() {
             Our team is ready to provide you with a spotless environment.
           </div>
           <form ref={form} onSubmit={sendEmail}>
-            <div className="mt-[50px] text-left px-5">
-              Name* <br />
+            <div className="text-sm font-bold mt-[50px] text-left px-5">
+              Name<span className="text-[#C41C94]">*</span> <br />
               <input type="text" name="user_name" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-              Email* <br />
+              Email<span className="text-[#C41C94]">*</span> <br />
               <input type="text" name="user_email" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-              Phone Number* <br />
+              Phone Number<span className="text-[#C41C94]">*</span> <br />
               <input type="text" name="user_phone" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-
-
-
-              Message* <br />
+              Message<span className="text-[#C41C94]">*</span> <br />
               <textarea name="user_message" className="border px-3 w-full border-[#111111] py-2 rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-
-
-              Service Type:
-              <div className="flex flex-row justify-start gap-5 mt-2">
+              Service Type
+              <div className="flex font-normal flex-row justify-start gap-5 mt-2">
                 <div>
                   <input type="checkbox" id="service_type" name="service_type" value="commercial" />
                   <label htmlFor="service_type"> Commercial Cleaning</label>
@@ -253,8 +321,7 @@ export default function Home() {
                   <label htmlFor="service_type"> Deep Cleaning</label>
                 </div>
               </div>
-
-              <button className="bg-[#5AC8FA] w-full text-white rounded p-3 mt-6">
+              <button className="bg-[#fff5fe] w-full shadow-md text-[#C41C94] rounded p-3 mt-6">
                 Let&apos;s talk!
               </button>
             </div>
