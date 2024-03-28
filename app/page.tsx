@@ -292,7 +292,7 @@ export default function Home() {
           <div className="text-[40px] text-center font-bold mb-4">
             Reach Out to Us for <br className="hidden md:block" /> Exceptional Cleaning Services
           </div>
-          <div>
+          <div className="px-5">
             Don&apos;t hesitate to contact us for top-notch cleaning services. <br className="hidden md:block" />
             Our team is ready to provide you with a spotless environment.
           </div>
@@ -307,7 +307,7 @@ export default function Home() {
               Message<span className="text-[#C41C94]">*</span> <br />
               <textarea name="user_message" className="border px-3 w-full border-[#111111] py-2 rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
               Service Type
-              <div className="flex font-normal flex-row justify-start gap-5 mt-2">
+              <div className="flex font-normal flex-row justify-start gap-3 md:gap-5 mt-2">
                 <div>
                   <input type="checkbox" id="service_type" name="service_type" value="commercial" />
                   <label htmlFor="service_type"> Commercial Cleaning</label>
