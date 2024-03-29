@@ -70,7 +70,7 @@ export default function Home() {
       {/* Mobile Menu */}
       {
         showMenu &&
-        <div className="fixed md:hidden shadow-sm pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
+        <div className="fixed md:hidden shadow-sm pt-[70px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
             <div onClick={() => { scrolltoHash('about-us-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
               <span>About Us</span>
@@ -218,7 +218,7 @@ export default function Home() {
       <div id="location" className="text-center bg-[#fff5fe] gap-20 flex flex-col md:flex-row py-[120px] justify-center">
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} height={450} loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex justify-center pt-0 p-10 md:p-0 md:justify-left text-left">
@@ -250,7 +250,7 @@ export default function Home() {
           <div className="overflow-hidden h-[200px] rounded-xl">
             <Image src="/gallery/gallery_01.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={500} width={500} />
           </div>
-          <div className="overflow-hidden h-[200px] rounded-xl">
+          <div className="overflow-hidden h-[200px] hidden sm:block rounded-xl">
             <Image src="/gallery/gallery_05.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
           <div className="overflow-hidden hidden md:block h-[200px] rounded-xl">
@@ -261,7 +261,7 @@ export default function Home() {
           <div className="overflow-hidden h-[200px] rounded-xl">
             <Image src="/gallery/gallery_02.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
-          <div className="overflow-hidden h-[200px] rounded-xl">
+          <div className="overflow-hidden h-[200px] hidden sm:block rounded-xl">
             <Image src="/gallery/gallery_04.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
           <div className="overflow-hidden hidden md:block h-[200px] rounded-xl">
