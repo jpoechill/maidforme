@@ -107,7 +107,7 @@ export default function Home() {
         {/* </video> */}
         <div className="caption h-full text-white">
           <div className="h-full  bg-black bg-opacity-[0%] px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
-            <div className=" w-fit bg-[#EBF8FF] rounded-2xl p-4 px-8 pb-8 text-[#111]">
+            <div className=" w-fit bg-[#EBF8FF] shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
               <div className="text-[40px] font-bold">
                 Professional Cleaning Solutions
               </div>
