@@ -95,26 +95,38 @@ export default function Home() {
       }
 
       <div className="video-container mt-10">
-        <video autoPlay muted loop>
-          <source src="vaccuum.mov" type="video/mp4" />
-        </video>
+        {/* <video autoPlay muted loop> */}
+        <Image src="/_cover_01.jpg" className="rounded-xl w-full h-full absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
+
+        {/* width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0; */}
+        {/* <source src="vaccuum.mov" type="video/mp4" /> */}
+        {/* </video> */}
         <div className="caption h-full text-white">
-          <div className="h-full bg-black bg-opacity-40 px-5 md:px-10 lg:px-20 flex flex-col justify-center">
-            <div className="text-[40px] font-bold">
-              Professional Cleaning Solutions
+          <div className="h-full  bg-black bg-opacity-[0%] px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
+            <div className=" w-fit bg-[#EBF8FF] rounded-2xl p-4 px-8 pb-8 text-[#111]">
+              <div className="text-[40px] font-bold">
+                Professional Cleaning Solutions
+              </div>
+              <div>
+                Experience top-notch dusting, sanitizing, and vacuuming services with our professional cleaning team.
+              </div>
             </div>
-            <div>
-              Experience top-notch dusting, sanitizing, and vacuuming services with our professional cleaning team.
-            </div>
-            <div>
+
+            {/* <div>
               <button className="bg-[#fff5fe] rounded p-3 px-5 mt-4">
                 <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer text-[#C41C94] font-medium">Contact Us</span>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
+
+      {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/biQQXbZNau4?si=9b9LlZrE8I34tgDp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
       <div id="about-us" className="grid grid-cols-6 my-20 gap-10 py-[50px] px-5 md:px-10 lg:px-20">
         <div id="about-us-mobile" className="col-span-6 pt-5 lg:col-span-2 justify-center flex">
           <Image src="/thumb-04.png" className="rounded-xl w-full" alt="logo" width={580} height={10}></Image>
