@@ -47,9 +47,9 @@ export default function Home() {
           <div>
             <span onClick={() => scrolltoHash('our-services')} className="hover:underline cursor-pointer">Our Services</span>
           </div>
-          <div>
+          {/* <div>
             <span onClick={() => scrolltoHash('testimonials')} className="hover:underline cursor-pointer">Pricing</span>
-          </div>
+          </div> */}
           <div>
             <span onClick={() => scrolltoHash('testimonials')} className="hover:underline cursor-pointer">Testimonials</span>
           </div>
@@ -81,9 +81,9 @@ export default function Home() {
             <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
               <span>Our Services</span>
             </div> <br />
-            <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+            {/* <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
               <span>Pricing</span>
-            </div> <br />
+            </div> <br /> */}
             <div onClick={() => { scrolltoHash('testimonials'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
               <span>Testimonials</span>
             </div> <br />
