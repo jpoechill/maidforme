@@ -335,23 +335,28 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="text-center bg-[#e6f6ff] bg-pattern flex pt-20 pb-20 justify-center">
+      <div className="text-center bg-[#e6f6ff] bg-pattern flex px-5 pt-20 pb-20 justify-center">
         <div id="contact-us" className="py-5">
-          <div className="p-3 md:p-20 md:py-[70px] bg-[#ffeffd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
+          <div className="p-5 md:p-20 md:py-[70px] bg-[#ffeffd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
             <div className="text-[40px] text-left font-bold p-0 mb-2">
-              Reach Out to Us for Exceptional Cleaning Services
+              Reach Out
+              <span className="md:hidden">
+                !
+              </span>
+              <span className="hidden md:inline pl-2">
+                to Us for Exceptional Cleaning Services
+              </span>
             </div>
             <div className="text-left text-md font-light">
               Don&apos;t hesitate to contact us for top-notch cleaning services.
               Our team is ready to provide you with a spotless environment.
             </div>
             <form ref={form} onSubmit={sendEmail}>
-              <div className="text-md font-bold mt-[50px] text-left">
+              <div className="text-md font-bold mt-[30px] md:mt-[50px] text-left">
                 <div className="flex flex-col md:flex-row gap-5 ">
-
                   <div className="w-full">
                     Name<span className="text-[#C41C94]">*</span> <br />
-                    <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Jane Smith" /> <br /><br />
+                    <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Jane Smith" />
                   </div>
                   <div className="w-full">
                     Email/Phone<span className="text-[#C41C94]">*</span> <br />
