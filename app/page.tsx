@@ -45,7 +45,7 @@ export default function Home() {
             <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer">About Us</span>
           </div>
           <div>
-            <span onClick={() => scrolltoHash('our-services')} className="hover:underline cursor-pointer">Our Services</span>
+            <span onClick={() => scrolltoHash('our-services-mobile')} className="hover:underline cursor-pointer">Our Services</span>
           </div>
           {/* <div>
             <span onClick={() => scrolltoHash('testimonials')} className="hover:underline cursor-pointer">Pricing</span>
@@ -151,7 +151,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="our-services" className="bg-[#fff5fe] py-[75px] pb-10 lg:pt-10 lg:pb-20 px-5 md:px-10 lg:px-[150px] flex flex-col">
+      <div id="our-services" className="bg-[#fff5fe] bg-pattern py-[75px] pb-10 lg:pt-10 lg:pb-20 px-5 md:px-10 lg:px-[150px] flex flex-col">
         <div id="our-services-mobile" className="text-[40px] text-center pt-10 font-bold mb-4">
           Our Services
         </div>
@@ -233,7 +233,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="location" className="text-center bg-[#fff5fe] gap-20 flex flex-col md:flex-row py-[120px] justify-center">
+      <div id="location" className="bg-pattern  text-center bg-[#fff5fe] gap-20 flex flex-col md:flex-row py-[120px] justify-center">
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
@@ -305,54 +305,56 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="text-center bg-[#e6f6ff] flex pt-20 pb-20 justify-center">
-        <div id="contact-us" className="p-5 py-10 md:p-20 bg-[#ffeffd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
-          <div className="text-[40px] text-left font-bold p-0 mb-2">
-            Reach Out to Us for Exceptional Cleaning Services
-          </div>
-          <div className="text-left text-md font-light">
-            Don&apos;t hesitate to contact us for top-notch cleaning services.
-            Our team is ready to provide you with a spotless environment.
-          </div>
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="text-md font-bold mt-[50px] text-left">
-              <div className="flex flex-col md:flex-row gap-5 ">
-
-                <div className="w-full">
-                  Name<span className="text-[#C41C94]">*</span> <br />
-                  <input type="text" name="user_name" className="px-4 py-3  rounded-full mt-2 w-full" /> <br /><br />
-
-                </div>
-                <div className="w-full">
-                  Email/Phone<span className="text-[#C41C94]">*</span> <br />
-                  <input type="text" name="user_phone" className="px-5 py-3  rounded-full mt-2 w-full" /> <br /><br />
-                </div>
-              </div>
-              <div></div>
-              {/* <input type="text" name="user_email" className="px-5 py-3  rounded-full mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-              Phone Number<span className="text-[#C41C94]">*</span> <br /> */}
-              Message<span className="text-[#C41C94]">*</span> <br />
-              <textarea name="user_message" className="px-5 w-full  py-3 rounded-full mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-              Service Type
-              <div className="flex font-normal flex-row justify-start gap-3 md:gap-5 mt-2">
-                <div>
-                  <input type="checkbox" id="service_type" name="service_type" value="commercial" />
-                  <label htmlFor="service_type"> Commercial Cleaning</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="service_type" name="service_type" value="residential" />
-                  <label htmlFor="service_type"> Residential Cleaning</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="service_type" name="service_type" value="deep cleaning" />
-                  <label htmlFor="service_type"> Deep Cleaning</label>
-                </div>
-              </div>
-              <button className="bg-[#C41C94] w-full shadow-md text-white rounded-full p-3 mt-6">
-                Let&apos;s talk!
-              </button>
+      <div className="text-center bg-[#e6f6ff] bg-pattern flex pt-20 pb-20 justify-center">
+        <div id="contact-us" className="py-5">
+          <div className="p-3 md:p-20 md:py-[70px] bg-[#ffeffd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
+            <div className="text-[40px] text-left font-bold p-0 mb-2">
+              Reach Out to Us for Exceptional Cleaning Services
             </div>
-          </form>
+            <div className="text-left text-md font-light">
+              Don&apos;t hesitate to contact us for top-notch cleaning services.
+              Our team is ready to provide you with a spotless environment.
+            </div>
+            <form ref={form} onSubmit={sendEmail}>
+              <div className="text-md font-bold mt-[50px] text-left">
+                <div className="flex flex-col md:flex-row gap-5 ">
+
+                  <div className="w-full">
+                    Name<span className="text-[#C41C94]">*</span> <br />
+                    <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Jane Smith" /> <br /><br />
+
+                  </div>
+                  <div className="w-full">
+                    Email/Phone<span className="text-[#C41C94]">*</span> <br />
+                    <input type="text" name="user_phone" className="px-5 py-3 font-light rounded-full mt-2 w-full" placeholder="email@gmail.com" /> <br /><br />
+                  </div>
+                </div>
+                <div></div>
+                {/* <input type="text" name="user_email" className="px-5 py-3  rounded-full mt-2 w-full lg:min-w-[500px]" /> <br /><br />
+              Phone Number<span className="text-[#C41C94]">*</span> <br /> */}
+                Message<span className="text-[#C41C94]">*</span> <br />
+                <textarea name="user_message" className="p-5 w-full font-light rounded-3xl mt-2 lg:min-w-[500px]" placeholder="Hello, I am looking for your services!" /> <br /><br />
+                Service Type
+                <div className="flex font-normal flex-row justify-start gap-3 md:gap-5 mt-2">
+                  <div>
+                    <input type="checkbox" id="service_type" name="service_type" value="commercial" />
+                    <label htmlFor="service_type"> Commercial Cleaning</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="service_type" name="service_type" value="residential" />
+                    <label htmlFor="service_type"> Residential Cleaning</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="service_type" name="service_type" value="deep cleaning" />
+                    <label htmlFor="service_type"> Deep Cleaning</label>
+                  </div>
+                </div>
+                <button className="bg-[#C41C94] w-full shadow-md text-white rounded-full p-3 mt-6">
+                  Let&apos;s talk!
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
 
@@ -380,7 +382,7 @@ export default function Home() {
             <br /><br />
 
             <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer text-[#C41C94]">About Us</span><br /><br />
-            <span onClick={() => scrolltoHash('our-services')} className="hover:underline cursor-pointer text-[#C41C94]">Our Services</span><br /><br />
+            <span onClick={() => scrolltoHash('our-services-mobile')} className="hover:underline cursor-pointer text-[#C41C94]">Our Services</span><br /><br />
             <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer text-[#C41C94]">Contact Us</span>
           </div>
           <div className="mt-5 lg:mt-0 col-span-3 lg:col-span-1">
