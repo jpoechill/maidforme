@@ -86,7 +86,12 @@ export default function Home() {
           </a>
         </div>
         <div className="cursor-pointer md:hidden" onClick={() => { setShowMenu(!showMenu) }}>
-          <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
+          {
+            showMenu ?
+              <Image src="/cross_icon.svg" alt="logo" className="fill-[#FFFFFF]" width={20} height={20}></Image>
+              :
+              <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
+          }
         </div>
       </div>
 
@@ -435,6 +440,6 @@ export default function Home() {
           2024 © Maid For Me. All rights reserved.
         </div>
       </div>
-    </main>
+    </main >
   );
 }
