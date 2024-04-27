@@ -21,12 +21,14 @@ export default function Home() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (form.current) {
-      emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
-        .then((result) => {
-          console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
-        });
+      // emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
+      //   .then((result) => {
+      //     console.log(result.text);
+      //   }, (error) => {
+      //     console.log(error.text);
+      //   });
+
+      console.log(form.current);
       alert('Message sent successfully!')
       form.current.reset()
       scrolltoHash('top')
@@ -337,16 +339,16 @@ export default function Home() {
                 Service Type
                 <div className="flex font-normal flex-row justify-start gap-3 md:gap-5 mt-2">
                   <div>
-                    <input type="checkbox" id="service_type" name="service_type" value="commercial" />
-                    <label htmlFor="service_type"> Commercial Cleaning</label>
+                    <input className="cursor-pointer" type="checkbox" id="commercial" name="service_type" value="commercial" />
+                    <label className="cursor-pointer" htmlFor="commercial"> Commercial Cleaning</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="service_type" name="service_type" value="residential" />
-                    <label htmlFor="service_type"> Residential Cleaning</label>
+                    <input className="cursor-pointer" type="checkbox" id="residential" name="service_type" value="residential" />
+                    <label className="cursor-pointer" htmlFor="residential"> Residential Cleaning</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="service_type" name="service_type" value="deep cleaning" />
-                    <label htmlFor="service_type"> Deep Cleaning</label>
+                    <input className="cursor-pointer" type="checkbox" id="deep_cleaning" name="service_type" value="deep cleaning" />
+                    <label className="cursor-pointer" htmlFor="deep_cleaning"> Deep Cleaning</label>
                   </div>
                 </div>
                 <button className="bg-[#C41C94] w-full shadow-md text-white rounded-full p-3 mt-6">
