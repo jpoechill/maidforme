@@ -21,12 +21,12 @@ export default function Home() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (form.current) {
-      // emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
-      //   .then((result) => {
-      //     console.log(result.text);
-      //   }, (error) => {
-      //     console.log(error.text);
-      //   });
+      emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
 
       console.log(form.current);
       alert('Message sent successfully!')
@@ -324,7 +324,6 @@ export default function Home() {
                   <div className="w-full">
                     Name<span className="text-[#C41C94]">*</span> <br />
                     <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Jane Smith" /> <br /><br />
-
                   </div>
                   <div className="w-full">
                     Email/Phone<span className="text-[#C41C94]">*</span> <br />
