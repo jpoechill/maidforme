@@ -305,25 +305,34 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="text-center bg-[#F9FAFB] flex pt-20 pb-20 justify-center">
-        <div id="contact-us" className="pt-10 pb-10 max-w-[500px] lg:max-w-[900px]">
-          <div className="text-[40px] text-center font-bold mb-4">
-            Reach Out to Us for <br className="hidden md:block" /> Exceptional Cleaning Services
+      <div className="text-center bg-[#e6f6ff] flex pt-20 pb-20 justify-center">
+        <div id="contact-us" className="p-5 py-10 md:p-20 bg-[#ffeffd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
+          <div className="text-[40px] text-left font-bold p-0 mb-2">
+            Reach Out to Us for Exceptional Cleaning Services
           </div>
-          <div className="px-5">
-            Don&apos;t hesitate to contact us for top-notch cleaning services. <br className="hidden md:block" />
+          <div className="text-left text-md font-light">
+            Don&apos;t hesitate to contact us for top-notch cleaning services.
             Our team is ready to provide you with a spotless environment.
           </div>
           <form ref={form} onSubmit={sendEmail}>
-            <div className="text-sm font-bold mt-[50px] text-left px-5">
-              Name<span className="text-[#C41C94]">*</span> <br />
-              <input type="text" name="user_name" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-              Email<span className="text-[#C41C94]">*</span> <br />
-              <input type="text" name="user_email" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
-              Phone Number<span className="text-[#C41C94]">*</span> <br />
-              <input type="text" name="user_phone" className="border px-3 py-2 border-[#111111] rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
+            <div className="text-md font-bold mt-[50px] text-left">
+              <div className="flex flex-col md:flex-row gap-5 ">
+
+                <div className="w-full">
+                  Name<span className="text-[#C41C94]">*</span> <br />
+                  <input type="text" name="user_name" className="px-4 py-3  rounded-full mt-2 w-full" /> <br /><br />
+
+                </div>
+                <div className="w-full">
+                  Email/Phone<span className="text-[#C41C94]">*</span> <br />
+                  <input type="text" name="user_phone" className="px-5 py-3  rounded-full mt-2 w-full" /> <br /><br />
+                </div>
+              </div>
+              <div></div>
+              {/* <input type="text" name="user_email" className="px-5 py-3  rounded-full mt-2 w-full lg:min-w-[500px]" /> <br /><br />
+              Phone Number<span className="text-[#C41C94]">*</span> <br /> */}
               Message<span className="text-[#C41C94]">*</span> <br />
-              <textarea name="user_message" className="border px-3 w-full border-[#111111] py-2 rounded-lg mt-2 w-full lg:min-w-[500px]" /> <br /><br />
+              <textarea name="user_message" className="px-5 w-full  py-3 rounded-full mt-2 w-full lg:min-w-[500px]" /> <br /><br />
               Service Type
               <div className="flex font-normal flex-row justify-start gap-3 md:gap-5 mt-2">
                 <div>
@@ -339,7 +348,7 @@ export default function Home() {
                   <label htmlFor="service_type"> Deep Cleaning</label>
                 </div>
               </div>
-              <button className="bg-[#fff5fe] w-full shadow-md text-[#C41C94] rounded p-3 mt-6">
+              <button className="bg-[#C41C94] w-full shadow-md text-white rounded-full p-3 mt-6">
                 Let&apos;s talk!
               </button>
             </div>
