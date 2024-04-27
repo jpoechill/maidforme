@@ -44,22 +44,40 @@ export default function Home() {
         </div>
         <div className="hidden md:flex flex-row text-[16px] text-[#C41C94] items-center font-medium gap-10">
           <div>
-            <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer">About Us</span>
+            {/* onClick={() => scrolltoHash('about-us')}  */}
+            <span className="hover:underline cursor-pointer">
+              <Link href="#about-us">
+                About Us
+              </Link>
+            </span>
           </div>
           <div>
-            <span onClick={() => scrolltoHash('our-services-mobile')} className="hover:underline cursor-pointer">Our Services</span>
-          </div>
-          {/* <div>
-            <span onClick={() => scrolltoHash('testimonials')} className="hover:underline cursor-pointer">Pricing</span>
-          </div> */}
-          <div>
-            <span onClick={() => scrolltoHash('testimonials')} className="hover:underline cursor-pointer">Testimonials</span>
+            <span className="hover:underline cursor-pointer">
+              <Link href="#our-services-mobile">
+                Our Services
+              </Link>
+            </span>
           </div>
           <div>
-            <span onClick={() => scrolltoHash('gallery')} className="hover:underline cursor-pointer">Gallery</span>
+            <span className="hover:underline cursor-pointer">
+              <Link href="#testimonials">
+                Testimonials
+              </Link>
+            </span>
           </div>
           <div>
-            <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer">Contact Us</span>
+            <span className="hover:underline cursor-pointer">
+              <Link href="#gallery">
+                Gallery
+              </Link>
+            </span>
+          </div>
+          <div>
+            <span className="hover:underline cursor-pointer">
+              <Link href="#contact-us">
+                Contact Us
+              </Link>
+            </span>
           </div>
           <a href="tel:5106037272">
             <button className="bg-[#C41C94] w-full text-white rounded p-3 px-4">
@@ -77,27 +95,37 @@ export default function Home() {
         showMenu &&
         <div className="fixed md:hidden shadow-sm pt-[70px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
-            <div onClick={() => { scrolltoHash('about-us-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
-              <span>About Us</span>
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              {/* <span></span> */}
+              <Link href="#about-us-mobile">
+                About Us
+              </Link>
             </div> <br />
-            <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
-              <span>Our Services</span>
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              <Link href="#our-services-mobile">
+                Our Services
+              </Link>
             </div> <br />
-            {/* <div onClick={() => { scrolltoHash('our-services-mobile'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
-              <span>Pricing</span>
-            </div> <br /> */}
-            <div onClick={() => { scrolltoHash('testimonials'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
-              <span>Testimonials</span>
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              <Link href="#testimonials">
+                Testimonials
+              </Link>
             </div> <br />
-            <div onClick={() => { scrolltoHash('gallery'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
-              <span>Gallery</span>
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              <Link href="#gallery">
+                Gallery
+              </Link>
             </div> <br />
-            <div onClick={() => { scrolltoHash('contact-us'); setShowMenu(false) }} className="w-100 pb-0  hover:underline cursor-pointer">
-              <span>Contact Us</span>
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-0  hover:underline cursor-pointer">
+              <Link href="#contact-us">
+                Contact Us
+              </Link>
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-full bg-[#C41C94] text-white text-center p-5 rounded-2xl hover:underline cursor-pointer">
-              <span>Call Now</span>
-            </div>
+            <a href="tel:5106037272">
+              <div onClick={() => { setShowMenu(false) }} className="w-full bg-[#C41C94] text-white text-center p-5 rounded-2xl hover:underline cursor-pointer">
+                Call Now
+              </div>
+            </a>
           </div>
         </div>
       }
