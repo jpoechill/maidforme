@@ -40,7 +40,7 @@ export default function Home() {
       <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
         <div className="w-full bg-[#fff5fe] p-5">
           <a href="tel:5106037272">
-            <button className="bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl rounded-3xl w-full text-white p-5 px-4">
+            <button className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl rounded-3xl w-full text-white p-5 px-4">
               Call Now
             </button>
           </a>
@@ -89,7 +89,7 @@ export default function Home() {
             {/* </span> */}
           </div>
           <a href="tel:5106037272">
-            <button className="bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full text-white rounded-2xl p-3 px-4">
+            <button className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full text-white rounded-2xl p-3 px-4">
               Call Now
             </button>
           </a>
@@ -413,7 +413,7 @@ export default function Home() {
                     <label className="cursor-pointer" htmlFor="deep_cleaning"> Deep Cleaning</label>
                   </div>
                 </div>
-                <button className="bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full shadow-md text-white rounded-2xl p-3 mt-6">
+                <button className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full shadow-md text-white rounded-2xl p-3 mt-6">
                   Let&apos;s talk!
                 </button>
               </div>
