@@ -8,6 +8,11 @@ html {
   scroll-behavior: smooth !important;
 }
 
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .video-container {
   height: 600px;
   width: 100%;
@@ -31,4 +36,9 @@ position: relative;
 .bg-pattern {
   background-color: #f7fcff;
   background: linear-gradient(135deg, #eff9ff55 25%, transparent 25%) -39px 0/ 78px 78px, linear-gradient(225deg, #eff9ff 25%, transparent 25%) -39px 0/ 78px 78px, linear-gradient(315deg, #eff9ff55 25%, transparent 25%) 0px 0/ 78px 78px, linear-gradient(45deg, #eff9ff 25%, #f7fcff 25%) 0px 0/ 78px 78px;
+}
+
+.bg-repeat-custom {
+  background: url('/bg-repeat.jpg');
+  background-repeat: repeat;
 }

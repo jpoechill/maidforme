@@ -148,9 +148,11 @@ export default function Home() {
         {/* </video> */}
         <div className="caption h-full text-white">
           <div className="h-full  bg-black bg-opacity-[0%] px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
-            <div className=" w-fit bg-[#F9FAFB] shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
-              <div className="text-[40px] font-bold">
-                Professional Cleaning Solutions
+            <div className=" w-fit bg-white shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
+              <div>
+                <h1>
+                  Professional Cleaning Solutions
+                </h1>
               </div>
               <div>
                 Experience top-notch dusting, sanitizing, and vacuuming services with our professional cleaning team.
@@ -168,13 +170,15 @@ export default function Home() {
 
 
       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/biQQXbZNau4?si=9b9LlZrE8I34tgDp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-      <div id="about-us" className="grid grid-cols-6 my-20 gap-10 py-[50px] px-5 md:px-10 lg:px-20">
+      <div id="about-us" className="grid grid-cols-6 gap-10 py-[120px] px-5 md:px-10 lg:px-20">
         <div id="about-us-mobile" className="col-span-6 pt-5 lg:col-span-2 justify-center flex">
           <Image src="/thumb-04.png" className="rounded-xl w-full" alt="logo" width={580} height={10}></Image>
         </div>
         <div className="col-span-6 lg:col-span-4">
-          <div className="text-[40px] font-bold mb-8">
-            Spotless Excellence
+          <div className="mb-8">
+            <h1>
+              Spotless Excellence
+            </h1>
           </div>
           <div>
             Our cleaning services are designed to meet the highest standards of hygiene and cleanliness. We understand that every space has unique cleaning needs, and we tailor our services to meet those needs.
@@ -186,9 +190,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="our-services" className="bg-[#fff5fe] bg-pattern py-[75px] pb-10 lg:pt-10 lg:pb-20 px-5 md:px-10 lg:px-[150px] flex flex-col">
-        <div id="our-services-mobile" className="text-[40px] text-center pt-10 font-bold mb-4">
-          Our Services
+      <div id="our-services" className="bg-[#fff5fe] bg-repeat-custom py-[75px] pb-10 lg:pt-10 lg:pb-20 px-5 md:px-10 lg:px-[150px] flex flex-col">
+        <div id="our-services-mobile" className="text-center pt-10 mb-4">
+          <h1>
+            Our Services
+          </h1>
         </div>
         <div className="flex justify-center mb-10">
           <div className="flex max-w-[600px]  text-center">
@@ -226,8 +232,10 @@ export default function Home() {
           <div className="uppercase font-bold text-[#C41C94]">
             Testimonials
           </div>
-          <div className="text-[40px] text-center font-bold mb-10">
-            Voices of Satisfied Customers
+          <div className="text-center mb-10">
+            <h1>
+              Voices of Satisfied Customers
+            </h1>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             <div>
@@ -268,7 +276,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="location" className="bg-pattern  text-center bg-[#fff5fe] gap-20 flex flex-col md:flex-row py-[120px] justify-center">
+      <div id="location" className="bg-repeat-custom text-center bg-[#fff5fe] gap-20 flex flex-col md:flex-row py-[120px] justify-center">
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
@@ -276,7 +284,11 @@ export default function Home() {
         </div>
         <div className="w-full md:w-1/2 flex justify-center pt-0 p-10 md:p-0 md:justify-left text-left">
           <div className="max-w-[500px] leading-7">
-            <span className="text-4xl font-bold">Find Us Here! </span>
+            <span>
+              <h1>
+                Find Us Here!
+              </h1>
+            </span>
             <br /><br />
             Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area. Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection. Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!</div>
         </div>
@@ -290,9 +302,11 @@ export default function Home() {
         <span className="text-lg text-gray-700"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo earum quos voluptatum tempore quis exercitationem, ad officiis dolorum temporibus veritatis quod itaque repellendus molestiae culpa laboriosam, cupiditate voluptate. Eius, placeat! </span>
       </div> */}
 
-      <div className="text-center bg-white flex-col flex mb-10 px-5 pt-10 pb-20 justify-center">
-        <div id="gallery" className="text-[40px] text-center pt-10 font-bold mb-4">
-          Photo Gallery
+      <div className="text-center bg-white flex-col flex px-5 pt-10 pb-[120px] justify-center">
+        <div id="gallery" className="text-center pt-10 mb-4">
+          <h1>
+            Photo Gallery
+          </h1>
         </div>
         <div className="flex justify-center mb-10">
           <div className="flex max-w-[750px] px-10 text-center">
@@ -340,17 +354,19 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="text-center bg-[#e6f6ff] bg-pattern flex px-5 pt-20 pb-20 justify-center">
+      <div className="text-center bg-[#e6f6ff] bg-repeat-custom flex px-5 pt-20 pb-20 justify-center">
         <div id="contact-us" className="py-5">
           <div className="p-5 md:p-20 md:py-[70px] bg-[#ffeffd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
-            <div className="text-[40px] text-left font-bold p-0 mb-2">
-              Reach Out
-              <span className="md:hidden">
-                !
-              </span>
-              <span className="hidden md:inline pl-2">
-                to Us for Exceptional Cleaning Services
-              </span>
+            <div className="text-left p-0 mb-2">
+              <h1>
+                Reach Out
+                <span className="md:hidden">
+                  !
+                </span>
+                <span className="hidden md:inline pl-2">
+                  to Us for Exceptional Cleaning Services
+                </span>
+              </h1>
             </div>
             <div className="text-left text-md font-light">
               Don&apos;t hesitate to contact us for top-notch cleaning services.
