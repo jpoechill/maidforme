@@ -40,7 +40,7 @@ export default function Home() {
       <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
         <div className="w-full bg-[#fff5fe] p-5">
           <a href="tel:5106037272">
-            <button className="bg-[#C41C94] rounded-3xl w-full text-white p-5 px-4">
+            <button className="bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl rounded-3xl w-full text-white p-5 px-4">
               Call Now
             </button>
           </a>
@@ -54,42 +54,42 @@ export default function Home() {
         <div className="hidden lg:flex flex-row text-[16px] text-[#C41C94] items-center font-medium gap-10">
           <div>
             {/* onClick={() => scrolltoHash('about-us')}  */}
-            <span className="hover:underline cursor-pointer">
-              <Link href="#about-us">
-                About Us
-              </Link>
-            </span>
+            {/* <span className="cursor-pointer"> */}
+            <Link href="#about-us">
+              About Us
+            </Link>
+            {/* </span> */}
           </div>
           <div>
-            <span className="hover:underline cursor-pointer">
-              <Link href="#our-services-mobile">
-                Our Services
-              </Link>
-            </span>
+            {/* <span className="hover:underline cursor-pointer"> */}
+            <Link href="#our-services-mobile">
+              Our Services
+            </Link>
+            {/* </span> */}
           </div>
           <div>
-            <span className="hover:underline cursor-pointer">
-              <Link href="#testimonials">
-                Testimonials
-              </Link>
-            </span>
+            {/* <span className="hover:underline cursor-pointer"> */}
+            <Link href="#testimonials">
+              Testimonials
+            </Link>
+            {/* </span> */}
           </div>
           <div>
-            <span className="hover:underline cursor-pointer">
-              <Link href="#gallery">
-                Gallery
-              </Link>
-            </span>
+            {/* <span className="hover:underline cursor-pointer"> */}
+            <Link href="#gallery">
+              Gallery
+            </Link>
+            {/* </span> */}
           </div>
           <div>
-            <span className="hover:underline cursor-pointer">
-              <Link href="#contact-us">
-                Contact Us
-              </Link>
-            </span>
+            {/* <span className="hover:underline cursor-pointer"> */}
+            <Link href="#contact-us">
+              Contact Us
+            </Link>
+            {/* </span> */}
           </div>
           <a href="tel:5106037272">
-            <button className="bg-[#C41C94] w-full text-white rounded p-3 px-4">
+            <button className="bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full text-white rounded-2xl p-3 px-4">
               Call Now
             </button>
           </a>
@@ -107,25 +107,25 @@ export default function Home() {
       {/* Mobile Menu */}
       {
         showMenu &&
-        <div className="fixed md:hidden shadow-sm pt-[70px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
+        <div className="fixed md:hidden shadow-2xl pt-[70px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
               {/* <span></span> */}
               <Link href="#about-us-mobile">
                 About Us
               </Link>
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
               <Link href="#our-services-mobile">
                 Our Services
               </Link>
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
               <Link href="#testimonials">
                 Testimonials
               </Link>
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
               <Link href="#gallery">
                 Gallery
               </Link>
@@ -157,7 +157,7 @@ export default function Home() {
         {/* </video> */}
         <div className="caption h-full text-white">
           <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
-            <div className=" w-fit bg-white shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
+            <div className=" w-fit bg-[#fff4fd] shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
               <div>
                 <h1>
                   Professional Cleaning Solutions
@@ -365,7 +365,7 @@ export default function Home() {
 
       <div className="text-center bg-[#e6f6ff] bg-repeat-custom flex px-5 pt-20 pb-20 justify-center">
         <div id="contact-us" className="py-5">
-          <div className="p-5 md:p-20 md:py-[70px] bg-[#ffeffd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
+          <div className="p-5 md:p-20 md:py-[70px] bg-[#fff4fd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
             <div className="text-left p-0 mb-2">
               <h1>
                 Reach Out
@@ -382,7 +382,7 @@ export default function Home() {
               Our team is ready to provide you with a spotless environment.
             </div>
             <form ref={form} onSubmit={sendEmail}>
-              <div className="text-md font-bold mt-[30px] md:mt-[50px] text-left">
+              <div className="text-md font-bold mt-[30px] md:mt-[50px] pb-5 lg:pb-0 text-left">
                 <div className="flex flex-col md:flex-row gap-5 ">
                   <div className="w-full">
                     Name<span className="text-[#C41C94]">*</span> <br />
@@ -413,7 +413,7 @@ export default function Home() {
                     <label className="cursor-pointer" htmlFor="deep_cleaning"> Deep Cleaning</label>
                   </div>
                 </div>
-                <button className="bg-[#C41C94] w-full shadow-md text-white rounded-full p-3 mt-6">
+                <button className="bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full shadow-md text-white rounded-2xl p-3 mt-6">
                   Let&apos;s talk!
                 </button>
               </div>
@@ -445,9 +445,25 @@ export default function Home() {
             </span>
             <br /><br />
 
-            <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer text-[#C41C94]">About Us</span><br /><br />
-            <span onClick={() => scrolltoHash('our-services-mobile')} className="hover:underline cursor-pointer text-[#C41C94]">Our Services</span><br /><br />
-            <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer text-[#C41C94]">Contact Us</span>
+            {/* <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer text-[#C41C94]"> */}
+            <Link href="#about-us">
+              About Us
+            </Link>
+            {/* </span> */}
+            <br /><br />
+            {/* <span onClick={() => scrolltoHash('our-services-mobile')} className="hover:underline cursor-pointer text-[#C41C94]"> */}
+
+            <Link href="#our-services-mobile">
+              Our Services
+            </Link>
+            {/* </span> */}
+            <br /><br />
+            {/* <span onClick={() => scrolltoHash('contact-us')} className="hover:underline cursor-pointer text-[#C41C94]"> */}
+
+            <Link href="#contact-us">
+              Contact Us
+            </Link>
+            {/* </span> */}
           </div>
           <div className="mt-5 lg:mt-0 col-span-3 lg:col-span-1">
             <span className="font-bold">
@@ -456,9 +472,9 @@ export default function Home() {
             <br /><br />
             <span className="text-[#C41C94]">hello@maidforme.co</span>
             <br /><br />
-            <a href="tel:5106037272">
+            <Link href="tel:5106037272">
               <span className="text-[#C41C94]">510-603-7272</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mt-10 pt-10 mb-20 lg:mb-0 text-sm">

@@ -13,6 +13,14 @@ h1 {
   font-weight: bold;
 }
 
+a {
+  color: #C41C94;
+}
+
+a:hover {
+  color: #ffade8;
+}
+
 .video-container {
   height: 600px;
   width: 100%;
