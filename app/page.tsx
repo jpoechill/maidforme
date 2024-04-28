@@ -37,12 +37,21 @@ export default function Home() {
 
   return (
     <main id="top">
+      <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
+        <div className="w-full bg-[#fff5fe] p-5">
+          <a href="tel:5106037272">
+            <button className="bg-[#C41C94] rounded-3xl w-full text-white p-5 px-4">
+              Call Now
+            </button>
+          </a>
+        </div>
+      </div>
       <div className="fixed bg-[#fff5fe] w-full z-10 text-black px-5 md:px-10 py-6 top-0 flex flex-row items-center justify-between h-[80px]">
         <div>
-          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer hidden lg:block mb-1" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
-          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image>
+          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-1" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
+          {/* <Image onClick={() => scrolltoHash('top')} className="cursor-pointer inline lg:hidden" src="/maidforme_logo_sml.png" alt="logo" width={50} height={50}></Image> */}
         </div>
-        <div className="hidden md:flex flex-row text-[16px] text-[#C41C94] items-center font-medium gap-10">
+        <div className="hidden lg:flex flex-row text-[16px] text-[#C41C94] items-center font-medium gap-10">
           <div>
             {/* onClick={() => scrolltoHash('about-us')}  */}
             <span className="hover:underline cursor-pointer">
@@ -85,7 +94,7 @@ export default function Home() {
             </button>
           </a>
         </div>
-        <div className="cursor-pointer md:hidden" onClick={() => { setShowMenu(!showMenu) }}>
+        <div className="cursor-pointer lg:hidden" onClick={() => { setShowMenu(!showMenu) }}>
           {
             showMenu ?
               <Image src="/cross_icon.svg" alt="logo" className="fill-[#FFFFFF]" width={20} height={20}></Image>
@@ -125,17 +134,17 @@ export default function Home() {
               <Link href="#contact-us">
                 Contact Us
               </Link>
-            </div> <br />
-            <a href="tel:5106037272">
+            </div>
+            {/* <a href="tel:5106037272">
               <div onClick={() => { setShowMenu(false) }} className="w-full bg-[#C41C94] text-white text-center p-5 rounded-2xl hover:underline cursor-pointer">
                 Call Now
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
       }
 
-      <div className="video-container mt-10">
+      <div className="video-container mt-10 bg-repeat-custom">
         {/* <video autoPlay muted loop> */}
         <Image src="/_cover_01.jpg" className="rounded-xl w-full h-full absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
 
@@ -147,7 +156,7 @@ export default function Home() {
         {/* <source src="vaccuum.mov" type="video/mp4" /> */}
         {/* </video> */}
         <div className="caption h-full text-white">
-          <div className="h-full  bg-black bg-opacity-[0%] px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
+          <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
             <div className=" w-fit bg-white shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
               <div>
                 <h1>
@@ -452,7 +461,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="mt-10 pt-10 text-sm">
+        <div className="mt-10 pt-10 mb-20 lg:mb-0 text-sm">
           2024 © Maid For Me. All rights reserved.
         </div>
       </div>
