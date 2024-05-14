@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <main id="top">
+    <main id="top" className="max-h-screen overflow-scroll snap-y snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
         <div className="w-full bg-[#fff5fe] p-5">
           <a href="tel:5106037272">
@@ -107,7 +107,7 @@ export default function Home() {
       {/* Mobile Menu */}
       {
         showMenu &&
-        <div className="fixed md:hidden shadow-2xl pt-[70px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
+        <div className="fixed lg:hidden shadow-2xl pt-[70px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
             <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
               {/* <span></span> */}
@@ -144,9 +144,9 @@ export default function Home() {
         </div>
       }
 
-      <div className="video-container mt-10 bg-repeat-custom">
+      <div className="snap-center video-container mt-10 bg-repeat-custom">
         {/* <video autoPlay muted loop> */}
-        <Image src="/_cover_01.jpg" className="rounded-xl w-full h-full absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
+        <Image src="/cover_02.jpg" className="rounded-xl w-full h-full absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
 
         {/* width: 100%;
   height: 100%;
@@ -157,13 +157,16 @@ export default function Home() {
         {/* </video> */}
         <div className="caption h-full text-white">
           <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
-            <div className=" w-fit bg-[#fff4fd] shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
+            <div className=" w-fit bg-[white] border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
               <div>
-                <h1>
+                <h1 className="text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leadin-normal lg:text-[40px]">
                   Professional Cleaning Solutions
                 </h1>
+                {/* <h1 className="t lg:hidden">
+                  Professional Cleaning Solutions
+                </h1> */}
               </div>
-              <div>
+              <div className="pt-2 lg:pt-4">
                 Experience top-notch dusting, sanitizing, and vacuuming services with our professional cleaning team.
               </div>
             </div>
@@ -179,7 +182,7 @@ export default function Home() {
 
 
       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/biQQXbZNau4?si=9b9LlZrE8I34tgDp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-      <div id="about-us" className="grid grid-cols-6 gap-10 py-[120px] px-5 md:px-10 lg:px-20">
+      <div id="about-us" className="snap-center grid grid-cols-6 gap-10 py-[120px] px-5 md:px-10 lg:px-20">
         <div id="about-us-mobile" className="col-span-6 pt-5 lg:col-span-2 justify-center flex">
           <Image src="/thumb-04.png" className="rounded-xl w-full" alt="logo" width={580} height={10}></Image>
         </div>
@@ -199,13 +202,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="our-services" className="bg-[#fff5fe] bg-repeat-custom py-[75px] pb-10 lg:pt-10 lg:pb-20 px-5 md:px-10 lg:px-[150px] flex flex-col">
-        <div id="our-services-mobile" className="text-center pt-10 mb-4">
+      <div id="our-services" className="snap-center bg-[#fff5fe] bg-repeat-custom py-[75px] pb-10 lg:pt-10 lg:pb-20 px-5 md:px-10 lg:px-[150px] flex flex-col">
+        <div id="our-services-mobile" className="text-center pt-20 mb-4">
           <h1>
             Our Services
           </h1>
         </div>
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-0">
           <div className="flex max-w-[600px]  text-center">
             We provide top-notch cleaning services tailored to meet the unique needs of businesses in the Cleaning Services industry. Our team of professionals is committed to delivering exceptional results.
           </div>
@@ -236,9 +239,9 @@ export default function Home() {
       </div>
 
 
-      <div id="testimonials" className="text-center flex px-5 md:px-20 py-20 justify-center">
-        <div id="testimonials-mobile" className=" pt-5 pb-10 max-w-[500px] lg:max-w-[1200px]">
-          <div className="uppercase font-bold text-[#C41C94]">
+      <div id="testimonials" className="snap-center text-center flex px-5 md:px-20 py-20 justify-center">
+        <div id="testimonials-mobile" className=" pt-5 pb-5 max-w-[500px] lg:max-w-[1200px]">
+          <div className="uppercase font-bold pt-20 text-[#C41C94]">
             Testimonials
           </div>
           <div className="text-center mb-10">
@@ -246,7 +249,93 @@ export default function Home() {
               Voices of Satisfied Customers
             </h1>
           </div>
-          <div className="grid md:grid-cols-3 gap-10">
+
+          <div className="flex flex-row relative pb-20 gap-[50px] snap-x snap-mandatory snap-always px-[40px] max-w-full overflow-scroll">
+            <div className="snap-center min-w-[350px]">
+              <div className="bg-[white] border rounded-xl shadow-xl text-sm p-7 text-left">
+                Maid For Me has been an absolute lifesaver! Their attention to detail and thoroughness in cleaning our home is unmatched. We&apos;ve tried other cleaning services in the past, but Maid For Me truly stands out. Their professionalism and reliability make them our go-to choice every time.
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/female-01.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <div className="flex flex-col">
+                    <span className="font-sans font-bold text-sm pl-5">
+                      Sarah M.
+                    </span>
+                    <div className="font-sans font-extralight text-xs pl-5">
+                      Oakland, CA
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="snap-center min-w-[350px]">
+              <div className="bg-[white] border border-[#f1f1f1] rounded-xl shadow-xl text-sm p-7 text-left">
+                For busy professionals like me, this cleaning service is a lifesaver. Trustworthy, reliable, and they always leave my home sparkling clean.
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/male-02.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <div className="flex flex-col">
+                    <span className="font-sans font-bold text-sm pl-5">
+                      John D.
+                    </span>
+                    <div className="font-sans font-extralight text-xs pl-5">
+                      Piedmont, CA
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="snap-center min-w-[350px]">
+              <div className="bg-[white] border border-[#f1f1f1] rounded-xl shadow-xl text-sm p-7 text-left">
+                I&apos;ve been a loyal customer of Maid For Me for over a year now, and I couldn&apos;t be happier with their service. Whether it&apos;s a routine cleaning or a deep clean before hosting guests, they consistently deliver exceptional results. I appreciate their flexibility and dedication to making my home shine!
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/female-03.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <div className="flex flex-col">
+                    <span className="font-sans font-bold text-sm pl-5">
+                      Emily R.
+                    </span>
+                    <div className="font-sans font-extralight text-xs pl-5">
+                      San Francisco, CA
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* <div className="snap-center min-w-[350px]">
+              <div className="bg-[white] border border-[#f1f1f1] rounded-xl shadow-xl text-sm p-7 text-left">
+                Maid For Me has been an absolute lifesaver! Their attention to detail and thoroughness in cleaning our home is unmatched. We&apos;ve tried other cleaning services in the past, but Maid For Me truly stands out. Their professionalism and reliability make them our go-to choice every time.
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/female-01.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <span className="font-sans font-bold text-sm pl-5">
+                    Sarah M.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="snap-center min-w-[350px]">
+              <div className="bg-[white] border border-[#f1f1f1] rounded-xl shadow-xl text-sm p-7 text-left">
+                For busy professionals like me, this cleaning service is a lifesaver. Trustworthy, reliable, and they always leave my home sparkling clean.
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/male-02.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <span className="font-sans font-bold text-sm pl-5">
+                    John D.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="snap-center min-w-[350px]">
+              <div className="bg-[white] border border-[#f1f1f1] rounded-xl shadow-xl text-sm p-7 text-left">
+                I&apos;ve been a loyal customer of Maid For Me for over a year now, and I couldn&apos;t be happier with their service. Whether it&apos;s a routine cleaning or a deep clean before hosting guests, they consistently deliver exceptional results. I appreciate their flexibility and dedication to making my home shine!
+                <div className="flex flex-row items-center mt-7">
+                  <Image src="/avatars/female-03.jpeg" alt="" className="rounded-full" width={60} height={60} />
+                  <span className="font-sans font-bold text-sm pl-5">
+                    Emily R.
+                  </span>
+                </div>
+              </div>
+            </div> */}
+          </div>
+
+
+          {/* <div className="grid md:grid-cols-3 gap-10">
             <div>
               <div className="bg-[#F9FAFB] rounded-xl text-sm p-7 text-left">
                 Maid For Me has been an absolute lifesaver! Their attention to detail and thoroughness in cleaning our home is unmatched. We&apos;ve tried other cleaning services in the past, but Maid For Me truly stands out. Their professionalism and reliability make them our go-to choice every time.
@@ -281,25 +370,29 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+
+
         </div>
       </div>
 
-      <div id="location" className="bg-repeat-custom text-center bg-[#fff5fe] gap-20 flex flex-col md:flex-row py-[120px] justify-center">
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
+      <div id="location" className="snap-center bg-repeat-custom text-center bg-[#fff5fe] flex flex-col md:flex-row py-[120px] justify-center">
+        <div className="py-10 w-full flex gap-10 px-10 flex-col md:flex-row">
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+            <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
+            </div>
           </div>
-        </div>
-        <div className="w-full md:w-1/2 flex justify-center pt-0 p-10 md:p-0 md:justify-left text-left">
-          <div className="max-w-[500px] leading-7">
-            <span>
-              <h1>
-                Find Us Here!
-              </h1>
-            </span>
-            <br /><br />
-            Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area. Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection. Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!</div>
+          <div className="w-full md:w-1/2 flex justify-center pt-5 md:pt-20 lg:pt-0 p-0 md:p-10 md:p-0 md:justify-left text-left">
+            <div className="max-w-[500px] leading-7">
+              <span>
+                <h1>
+                  Find Us Here!
+                </h1>
+              </span>
+              <br /><br />
+              Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area. Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection. Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!</div>
+          </div>
         </div>
       </div>
 
@@ -311,8 +404,8 @@ export default function Home() {
         <span className="text-lg text-gray-700"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo earum quos voluptatum tempore quis exercitationem, ad officiis dolorum temporibus veritatis quod itaque repellendus molestiae culpa laboriosam, cupiditate voluptate. Eius, placeat! </span>
       </div> */}
 
-      <div className="text-center bg-white flex-col flex px-5 pt-10 pb-[120px] justify-center">
-        <div id="gallery" className="text-center pt-10 mb-4">
+      <div className="snap-center text-center bg-white flex-col flex px-5 pt-10 pb-[120px] justify-center">
+        <div id="gallery" className="text-center pt-20 mb-4">
           <h1>
             Photo Gallery
           </h1>
@@ -363,7 +456,7 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="text-center bg-[#e6f6ff] bg-repeat-custom flex px-5 pt-20 pb-20 justify-center">
+      <div className="snap-center text-center bg-[#e6f6ff] bg-repeat-custom flex px-5 pt-20 pb-20 justify-center">
         <div id="contact-us" className="py-5">
           <div className="p-5 md:p-20 md:py-[70px] bg-[#fff4fd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
             <div className="text-left p-0 mb-2">
@@ -422,7 +515,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#fff5fe] text-black text-[14px] py-12 lg:py-15 px-5 md:px-10">
+      <div className="snap-center bg-[#fff5fe] text-black text-[14px] py-12 lg:py-15 px-5 md:px-10">
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-6 lg:col-span-3 mb-5">
 
@@ -479,8 +572,13 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="mt-10 pt-10 mb-20 lg:mb-0 text-sm">
-          2024 © Maid For Me. All rights reserved.
+        <div className="mt-10 pt-10 mb-20 font-light lg:mb-0 text-sm flex justify-between">
+          <div className="font-light">
+            2024 © Maid For Me. All rights reserved.
+          </div>
+          <div className="font-light">
+            This website was made with enhancements using AI.
+          </div>
         </div>
       </div>
     </main >
