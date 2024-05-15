@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <main id="top" className="max-h-screen overflow-scroll lg:snap-y lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+    <main id="top" className="max-h-screen overflow-x-hidden lg:snap-y lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       {/* <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
         <div className="w-full bg-[#fff5fe] p-5">
           <a href="tel:5106037272">
@@ -250,7 +250,7 @@ export default function Home() {
             </h1>
           </div>
 
-          <div className="flex flex-row relative pb-20 gap-[50px] snap-x snap-mandatory snap-always px-[40px] max-w-full overflow-scroll">
+          <div className="flex flex-row relative pb-20 gap-[50px] snap-x snap-mandatory snap-always px-[100px] max-w-full overflow-scroll">
             <div className="snap-center min-w-[350px]">
               <div className="bg-[white] border rounded-xl shadow-xl text-sm p-7 text-left">
                 Maid For Me has been an absolute lifesaver! Their attention to detail and thoroughness in cleaning our home is unmatched. We&apos;ve tried other cleaning services in the past, but Maid For Me truly stands out. Their professionalism and reliability make them our go-to choice every time.
