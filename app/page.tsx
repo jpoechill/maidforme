@@ -36,8 +36,8 @@ export default function Home() {
   };
 
   return (
-    <main id="top" className="max-h-screen overflow-scroll snap-y snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
-      <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
+    <main id="top" className="max-h-screen overflow-scroll lg:snap-y lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+      {/* <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
         <div className="w-full bg-[#fff5fe] p-5">
           <a href="tel:5106037272">
             <button className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl rounded-3xl w-full text-white p-5 px-4">
@@ -45,7 +45,7 @@ export default function Home() {
             </button>
           </a>
         </div>
-      </div>
+      </div> */}
       <div className="fixed bg-[#fff5fe] w-full z-10 text-black px-5 md:px-10 py-6 top-0 flex flex-row items-center justify-between h-[80px]">
         <div>
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-1" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
@@ -107,7 +107,7 @@ export default function Home() {
       {/* Mobile Menu */}
       {
         showMenu &&
-        <div className="fixed lg:hidden shadow-2xl pt-[70px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
+        <div className="fixed lg:hidden shadow-2xl pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
             <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
               {/* <span></span> */}
@@ -135,11 +135,11 @@ export default function Home() {
                 Contact Us
               </Link>
             </div>
-            {/* <a href="tel:5106037272">
-              <div onClick={() => { setShowMenu(false) }} className="w-full bg-[#C41C94] text-white text-center p-5 rounded-2xl hover:underline cursor-pointer">
+            <a href="tel:5106037272" className="">
+              <div onClick={() => { setShowMenu(false) }} className="w-full mt-6 bg-[#C41C94] text-white text-center p-5 rounded-2xl cursor-pointer">
                 Call Now
               </div>
-            </a> */}
+            </a>
           </div>
         </div>
       }
@@ -209,7 +209,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex justify-center mb-0">
-          <div className="flex max-w-[600px]  text-center">
+          <div className="flex max-w-[600px] pb-8 text-center">
             We provide top-notch cleaning services tailored to meet the unique needs of businesses in the Cleaning Services industry. Our team of professionals is committed to delivering exceptional results.
           </div>
         </div>
@@ -492,7 +492,7 @@ export default function Home() {
                 Message<span className="text-[#C41C94]">*</span> <br />
                 <textarea name="user_message" className="p-5 w-full font-light rounded-3xl mt-2 lg:min-w-[500px]" placeholder="Hello, I am looking for your services!" /> <br /><br />
                 Service Type
-                <div className="flex font-normal flex-row justify-start gap-3 md:gap-5 mt-2">
+                <div className="flex font-normal flex-col md:flex-row justify-start gap-3 md:gap-5 mt-2">
                   <div>
                     <input className="cursor-pointer" type="checkbox" id="commercial" name="service_type" value="commercial" />
                     <label className="cursor-pointer" htmlFor="commercial"> Commercial Cleaning</label>
@@ -527,7 +527,10 @@ export default function Home() {
               <Link href="https://www.facebook.com/profile.php?id=61559035648699">
                 <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
               </Link>
-              <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd"></path></svg>
+
+              <Link href="https://www.instagram.com/maidforme.co">
+                <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd"></path></svg>
+              </Link>
               <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" /></svg>
             </div>
             <div className="flex flex-row gap-5 mt-3">
@@ -572,7 +575,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="mt-10 pt-10 mb-20 font-light lg:mb-0 text-sm flex justify-between">
+        <div className="mt-10 pt-10 md:mb-20 flex-col gap-5 md:flex-row font-light lg:mb-0 text-sm flex justify-between">
           <div className="font-light">
             2024 © Maid For Me. All rights reserved.
           </div>
