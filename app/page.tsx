@@ -94,10 +94,10 @@ export default function Home() {
             </button>
           </a>
         </div>
-        <div className="cursor-pointer lg:hidden" onClick={() => { setShowMenu(!showMenu) }}>
+        <div className="cursor-pointer lg:hidden p-5 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
           {
             showMenu ?
-              <Image src="/cross_icon.svg" alt="logo" className="fill-[#FFFFFF]" width={20} height={20}></Image>
+              <Image src="/cross_icon.svg" alt="logo" className="fill-[#FFFFFF]" width={23} height={23}></Image>
               :
               <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
           }
@@ -209,7 +209,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex justify-center mb-0">
-          <div className="flex max-w-[600px] pb-8 text-center">
+          <div className="flex max-w-[600px] pb-8 md:text-center">
             We provide top-notch cleaning services tailored to meet the unique needs of businesses in the Cleaning Services industry. Our team of professionals is committed to delivering exceptional results.
           </div>
         </div>
@@ -411,23 +411,23 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex justify-center mb-10">
-          <div className="flex max-w-[750px] px-10 text-center">
+          <div className="flex max-w-[750px] px-5 w-full text-left md:text-center">
             Discover spotless perfection in our photo gallery. See how we transform spaces with expert cleaning. Let the images inspire your home&apos;s next level of cleanliness.
           </div>
         </div>
         <div className="flex flex-row justify-center hover:cursor-pointer gap-3">
-          <div className="overflow-hidden h-[200px] rounded-xl">
+          <div className="overflow-hidden md:h-[200px] rounded-xl">
             <Image src="/gallery/gallery_01.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={500} width={500} />
           </div>
-          <div className="overflow-hidden h-[200px] hidden sm:block rounded-xl">
+          <div className="overflow-hidden md:h-[200px] hidden sm:block rounded-xl">
             <Image src="/gallery/gallery_05.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
-          <div className="overflow-hidden hidden md:block h-[200px] rounded-xl">
+          <div className="overflow-hidden hidden md:block md:h-[200px] rounded-xl">
             <Image src="/gallery/gallery_10.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
         </div>
         <div className="flex flex-row justify-center hover:cursor-pointer gap-3 mt-3">
-          <div className="overflow-hidden h-[200px] rounded-xl">
+          <div className="overflow-hidden md:h-[200px] rounded-xl">
             <Image src="/gallery/gallery_02.jpg" className="hover:scale-[1.05] h-full w-full transition-all duration-500 cursor-pointer grayscale hover:grayscale-0" alt="Gallery 01" height={200} width={500} />
           </div>
           <div className="overflow-hidden h-[200px] hidden sm:block rounded-xl">
@@ -456,9 +456,9 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="snap-center text-center bg-[#e6f6ff] bg-repeat-custom flex px-5 pt-20 pb-20 justify-center">
+      <div className="snap-center text-center bg-[#e6f6ff] bg-repeat-custom flex md:px-5 pt-20 pb-20 justify-center">
         <div id="contact-us" className="py-5">
-          <div className="p-5 md:p-20 md:py-[70px] bg-[#fff4fd] shadow-lg rounded-2xl max-w-[800px] lg:max-w-[1200px]">
+          <div className="p-5 md:p-20 md:py-[70px] bg-[#fff4fd] shadow-lg md:rounded-2xl max-w-[800px] lg:max-w-[1200px]">
             <div className="text-left p-0 mb-2">
               <h1>
                 Reach Out
