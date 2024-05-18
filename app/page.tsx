@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <main id="top" className="max-h-screen lg:snap-y lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+    <main id="top" className="absolute top-0 max-h-screen lg:snap-y lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       {/* <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
         <div className="w-full bg-[#fff5fe] p-5">
           <a href="tel:5106037272">

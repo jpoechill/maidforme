@@ -15,7 +15,7 @@ export default function Home() {
   }
 
   return (
-    <main id="top" className="max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+    <main id="top" className="absolute top-0 max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       <Sticky />
 
       <div id="testimonials" className="text-center flex px-5 mt-[80px] md:px-20 pb-7 justify-center">
@@ -56,6 +56,9 @@ export default function Home() {
               </div>
               <div id="answer3" className="text-lg">
                 Our pricing depends on the size of your home, the type of cleaning service required, and any additional requests. We offer customized quotes tailored to your specific needs.
+                <br /><br />
+                A general pricing guide can be found here: <Link href="https://www.maidforme.co/pricing">Pricing Guide</Link>
+
               </div>
             </div>
 

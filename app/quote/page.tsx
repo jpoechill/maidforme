@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <main id="top" className="max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+    <main id="top" className="absolute top-0 max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       <Sticky />
 
 
