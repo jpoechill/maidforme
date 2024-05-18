@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <main id="top" className="absolute top-0 max-h-screen lg:snap-y lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+    <main id="top" className="absolute top-0 w-full max-h-screen lg:snap-y lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       {/* <div className="fixed lg:hidden w-full z-10 shadow-2xl bottom-0">
         <div className="w-full bg-[#fff5fe] p-5">
           <a href="tel:5106037272">
@@ -63,7 +63,7 @@ export default function Home() {
           <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
             <div className=" w-fit bg-[white] border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
               <div>
-                <h1 className="text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leadin-normal lg:text-[40px]">
+                <h1 className="text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal lg:text-[40px]">
                   Professional Cleaning Solutions
                 </h1>
                 {/* <h1 className="t lg:hidden">
@@ -100,8 +100,6 @@ export default function Home() {
               </div>
               <div>
                 Our cleaning services are designed to meet the highest standards of hygiene and cleanliness. We understand that every space has unique cleaning needs, and we tailor our services to meet those needs.
-                {/* <br /><br />
-            Our team of professional cleaners is trained to handle a variety of cleaning tasks, from basic dusting and vacuuming to deep cleaning and sanitization. */}
                 <br /><br />
                 Our goal is to provide you with a clean, healthy, and comfortable space that you can be proud of. We are committed to delivering exceptional cleaning services that exceed your expectations.
               </div>
@@ -216,10 +214,10 @@ export default function Home() {
         <div className="py-10 w-full flex gap-10 px-10 flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={450} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={400} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center pt-5 md:pt-20 lg:pt-0 p-0 md:p-10 md:p-0 md:justify-left text-left">
+          <div className="w-full md:w-1/2 flex justify-center pt-5 md:pt-20 lg:pt-0 p-0 md:p-10 md:justify-left text-left">
             <div className="max-w-[500px] leading-7">
               <span>
                 <h1>
