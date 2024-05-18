@@ -71,7 +71,7 @@ export default function Home() {
       {/* Mobile Menu */}
       {
         showMenu &&
-        <div className="fixed lg:hidden shadow-2xl pt-[20px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
+        <div className="fixed lg:hidden shadow-2xl pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
             <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
               <Link href="/">
