@@ -16,7 +16,7 @@ export default function Home() {
 
 
   return (
-    <main id="top" className="absolute top-0 max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+    <main id="top" className="absolute top-0 w-full max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       <Sticky />
 
       <div className="snap-center text-center bg-white flex-col flex px-5 py-10 pb-20 justify-center">
