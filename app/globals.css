@@ -51,6 +51,12 @@ position: relative;
   background-repeat: repeat;
 }
 
+
+@keyframes fade-me-in {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 .css-selector {
   background: linear-gradient(270deg, #c41c94, #ef64c7);
   background-size: 400% 400%;

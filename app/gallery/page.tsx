@@ -19,7 +19,7 @@ export default function Home() {
     <main id="top" className="absolute top-0 w-full x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       <Sticky />
 
-      <div className="snap-center text-center bg-repeat-custom flex-col flex px-5 py-10 pb-20 justify-center">
+      <div className="animate-[fade-me-in_.5s_ease-in-out] snap-center text-center bg-repeat-custom flex-col flex px-5 py-10 pb-20 justify-center">
         <div id="gallery" className="text-center pt-20 mb-4">
           <h1>
             Photo Gallery

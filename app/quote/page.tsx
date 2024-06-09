@@ -85,7 +85,7 @@ export default function Home() {
       <Sticky />
 
 
-      <div className="snap-center text-center bg-[#e6f6ff] pt-[100px] bg-repeat-custom  flex md:px-5 pb-[50px] justify-center">
+      <div className="animate-[fade-me-in_.5s_ease-in-out] snap-center text-center bg-[#e6f6ff] pt-[100px] bg-repeat-custom  flex md:px-5 pb-[50px] justify-center">
         <div id="contact-us" className="py-5 lg:min-w-[1200px]">
           <div className="p-5 md:p-20 md:py-[40px] bg-[#fff4fd] shadow-lg md:rounded-2xl max-w-[800px] lg:max-w-[1200px]">
             <div className="text-left p-0 mb-2">

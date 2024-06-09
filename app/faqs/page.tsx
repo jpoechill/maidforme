@@ -18,7 +18,7 @@ export default function Home() {
     <main id="top" className="absolute top-0 w-full  max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       <Sticky />
 
-      <div id="testimonials" className="text-center flex px-5 mt-[80px] md:px-20 pb-7 justify-center">
+      <div id="testimonials" className="animate-[fade-me-in_.5s_ease-in-out] text-center flex px-5 mt-[80px] md:px-20 pb-7 justify-center">
         <div id="testimonials-mobile" className=" pt-5 pb-10 max-w-[500px] lg:max-w-[1200px]">
           <div className="uppercase font-bold pt-5 text-[#C41C94]">
             FAQs

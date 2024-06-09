@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div> */}
       <Sticky />
-      <div className="snap-center video-container min-h-screen mt-00 bg-repeat-custom">
+      <div className="animate-[fade-me-in_.5s_ease-in-out] snap-center video-container min-h-screen mt-00 bg-repeat-custom">
         {/* <video autoPlay muted loop> */}
         <Image src="/cover_03.jpg" className="hidden lg:block w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
         <Image src="/cover_03_mobile.jpg" className="lg:hidden w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
