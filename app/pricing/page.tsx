@@ -19,7 +19,7 @@ export default function Home() {
       <Sticky />
 
       <div id="testimonials" className="text-center flex px-5 mt-[80px] md:px-20 pb-7 justify-center">
-        <div id="testimonials-mobile" className="flex flex-col justify-center pt-10 pb-10 w-full lg:max-w-[1200px]">
+        <div id="testimonials-mobile" className="flex flex-col justify-center text-xs pt-10 pb-10 w-full lg:max-w-[1200px]">
           {/* <div className="uppercase font-bold pt-5 text-[#C41C94]">
             FAQs
           </div>
@@ -31,8 +31,9 @@ export default function Home() {
 
           {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, repellendus. */}
 
-          <Image src="/pricing_desktop.svg" className="pt-2 shadow-xl w-full mx-auto max-w-[800px]" alt="Pricing" width={1800} height={200}></Image>
-
+          <Image src="/pricing_desktop.svg" className="pt-0 shadow-xl w-full mx-auto max-w-[800px] mb-2" alt="Pricing" width={1800} height={200}></Image>
+          <br />
+          Prices subject to change.
         </div>
       </div>
 

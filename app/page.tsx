@@ -50,7 +50,8 @@ export default function Home() {
       <Sticky />
       <div className="snap-center video-container min-h-screen mt-00 bg-repeat-custom">
         {/* <video autoPlay muted loop> */}
-        <Image src="/cover_02.jpg" className="w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
+        <Image src="/cover_03.jpg" className="hidden lg:block w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
+        <Image src="/cover_03_mobile.jpg" className="lg:hidden w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
 
         {/* width: 100%;
   height: 100%;
@@ -61,18 +62,22 @@ export default function Home() {
         {/* </video> */}
         <div className="caption h-full text-white">
           <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
-            <div className=" w-fit bg-[white] border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
+            <div className="lg:w-fit bg-[#fff5fe] w-full border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
               <div>
-                <h1 className="text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal lg:text-[40px]">
-                  Professional Cleaning Solutions
+                <h1 className="lg:text-left  text-center text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal text-[#C41C94] lg:text-[40px]">
+                  Sparkling Clean, <br className="lg:hidden" />
+                  Every Time! ✨
                 </h1>
+                {/* <h1 className="text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal lg:text-[40px]">
+                  Professional Cleaning Solutions
+                </h1> */}
                 {/* <h1 className="t lg:hidden">
                   Professional Cleaning Solutions
                 </h1> */}
               </div>
-              <div className="pt-2 lg:pt-4">
+              {/* <div className="pt-2 lg:pt-4 text-lg">
                 Experience top-notch dusting, sanitizing, and vacuuming services with our professional cleaning team.
-              </div>
+              </div> */}
             </div>
 
             {/* <div>
@@ -86,7 +91,7 @@ export default function Home() {
 
 
       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/biQQXbZNau4?si=9b9LlZrE8I34tgDp&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
-      <div id="about-us" className="flex min-h-[700px] w-full  justify-center py-[120px] px-5 md:px-10 lg:px-20 items-center">
+      <div id="about-us" className="flex min-h-[700px] w-full bg-[#f3fafb] justify-center py-[120px] px-5 md:px-10 lg:px-20 items-center">
         <div className="max-w-[1200px] gap-10 w-full flex flex-col lg:flex-row">
           <div id="about-us-mobile" className="pt-5 justify-center">
             <Image src="/thumb-04.png" className="rounded-xl lg:min-w-[500px]" alt="logo" width={580} height={10}></Image>
@@ -98,7 +103,7 @@ export default function Home() {
                   Spotless Excellence
                 </h1>
               </div>
-              <div>
+              <div className="text-lg">
                 Our cleaning services are designed to meet the highest standards of hygiene and cleanliness. We understand that every space has unique cleaning needs, and we tailor our services to meet those needs.
                 <br /><br />
                 Our goal is to provide you with a clean, healthy, and comfortable space that you can be proud of. We are committed to delivering exceptional cleaning services that exceed your expectations.
@@ -210,7 +215,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div id="location" className="snap-center bg-white bg-repeat-custom text-center bg-[#fff5fe] flex flex-col md:flex-row py-[120px] justify-center">
+      <div id="location" className="snap-center bg-repeat-custom text-center flex flex-col md:flex-row py-[120px] justify-center">
         <div className="py-10 w-full flex gap-10 px-10 flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
@@ -218,14 +223,18 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center pt-5 md:pt-20 lg:pt-0 p-0 md:p-10 md:justify-left text-left">
-            <div className="max-w-[500px] leading-7">
+            <div className="max-w-[500px] leading-7 text-lg">
               <span>
                 <h1>
                   Find Us Here!
                 </h1>
               </span>
               <br /><br />
-              Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area. Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection. Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!</div>
+              Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area.
+              <br /><br />
+              Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection.
+              <br /><br />
+              Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!</div>
           </div>
         </div>
       </div>
@@ -276,9 +285,9 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="snap-center text-center flex md:px-5 pt-20 pb-20 justify-center">
+      <div className="snap-center bg-[#f3fafb] text-center flex md:px-5 pt-20 pb-20 justify-center">
         <div id="contact-us" className="py-5">
-          <div className="p-5 md:p-20 md:py-[70px] bg-[#fff4fd] shadow-lg md:rounded-2xl max-w-[800px] lg:max-w-[1200px]">
+          <div className="p-5 md:p-20 md:py-[70px] min-w-full bg-[#fff4fd] shadow-lg md:rounded-2xl w-full max-w-[800px] lg:min-w-[1200px]">
             <div className="text-left p-0 mb-2">
               <h1>
                 Reach Out
@@ -286,16 +295,18 @@ export default function Home() {
                   !
                 </span>
                 <span className="hidden md:inline pl-2">
-                  to Us for Exceptional Cleaning Services
+                  for Exceptional Cleaning Services
                 </span>
               </h1>
             </div>
-            <div className="text-left text-md font-light">
+            <div className="text-left text-lg font-light">
+              {/* Our team is ready to provide you with a spotless environment.  */}
+              {/* <br /><br /> */}
               Don&apos;t hesitate to contact us for top-notch cleaning services.
-              Our team is ready to provide you with a spotless environment.
+              {/* For serious inquiries, see our <Link href="/quote">Full Quote</Link> page! */}
             </div>
             <form ref={form} onSubmit={sendEmail}>
-              <div className="text-md font-bold mt-[30px] md:mt-[50px] pb-5 lg:pb-0 text-left">
+              <div className="text-md font-bold mt-[30px] md:mt-[30px] pb-5 lg:pb-0 text-left">
                 <div className="flex flex-col md:flex-row gap-5 ">
                   <div className="w-full">
                     Name<span className="text-[#C41C94]">*</span> <br />
@@ -311,7 +322,16 @@ export default function Home() {
               Phone Number<span className="text-[#C41C94]">*</span> <br /> */}
                 Message<span className="text-[#C41C94]">*</span> <br />
                 <textarea name="user_message" className="p-5 w-full font-light rounded-3xl mt-2 lg:min-w-[500px]" placeholder="Hello, I am looking for your services!" /> <br /><br />
-                Service Type
+                How did you hear about us? <br />
+                <select name="discovery" id="" className="mb-8 mt-2 p-3 w-full font-normal rounded-xl border-r-[15px] border-transparent px-3">
+                  <option value="Blank"></option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Google">Google</option>
+                  <option value="Friend">Friend</option>
+                  <option value="Other">Other</option>
+                </select>
+                {/* Service Type
                 <div className="flex font-normal flex-col md:flex-row justify-start gap-3 md:gap-5 mt-2">
                   <div>
                     <input className="cursor-pointer" type="checkbox" id="commercial" name="service_type" value="commercial" />
@@ -325,8 +345,8 @@ export default function Home() {
                     <input className="cursor-pointer" type="checkbox" id="deep_cleaning" name="service_type" value="deep cleaning" />
                     <label className="cursor-pointer" htmlFor="deep_cleaning"> Deep Cleaning</label>
                   </div>
-                </div>
-                <button className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full shadow-md text-white rounded-2xl p-3 mt-6">
+                </div> */}
+                <button className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full shadow-md text-white rounded-2xl p-3 mt-0">
                   Let&apos;s talk!
                 </button>
               </div>

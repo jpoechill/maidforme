@@ -16,17 +16,17 @@ export default function Home() {
 
 
   return (
-    <main id="top" className="absolute top-0 w-full max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
+    <main id="top" className="absolute top-0 w-full x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
       <Sticky />
 
-      <div className="snap-center text-center bg-white flex-col flex px-5 py-10 pb-20 justify-center">
+      <div className="snap-center text-center bg-repeat-custom flex-col flex px-5 py-10 pb-20 justify-center">
         <div id="gallery" className="text-center pt-20 mb-4">
           <h1>
             Photo Gallery
           </h1>
         </div>
         <div className="flex justify-center mb-10">
-          <div className="flex max-w-[750px] px-5 w-full text-left md:text-center">
+          <div className="flex max-w-[800px] text-lg px-0 w-full text-left md:text-center">
             Discover spotless perfection in our photo gallery. See how we transform spaces with expert cleaning. Let the images inspire your home&apos;s next level of cleanliness.
           </div>
         </div>

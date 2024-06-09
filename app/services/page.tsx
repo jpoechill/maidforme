@@ -32,28 +32,28 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:flex-row gap-[20px] max-w-[1000px] mx-auto lg:gap-[50px] w-full lg:mt-10">
             <div className="w-full mb-5 md:mb-0">
               <Image src="/thumb-05.png" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
-              <div className="min-h-[150px]">
+              <div className="min-h-[150px] text-left text-lg">
                 <div className="font-bold my-5">Commercial Cleaning</div>
                 Our Commercial Cleaning service ensures a spotless, well-maintained business environment. We use eco-friendly products and advanced cleaning techniques for optimal results.
               </div>
             </div>
             <div className="w-full mb-5 md:mb-0">
               <Image src="/thumb-02.png" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
-              <div className="min-h-[150px]">
+              <div className="min-h-[150px] text-left text-lg">
                 <div className="font-bold my-5">Residential Cleaning</div>
                 Our Residential Cleaning service offers thorough, customized cleaning solutions for homes. We prioritize your comfort and satisfaction, ensuring every corner is spotless.
               </div>
             </div>
             <div className="w-full mb-5 md:mb-0">
               <Image src="/thumb-03.png" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
-              <div className="min-h-[150px]">
+              <div className="min-h-[150px] text-left text-lg">
                 <div className="font-bold my-5">Deep Cleaning</div>
                 Our Deep Cleaning service goes beyond the surface, targeting hard-to-reach areas for a comprehensive clean. We leave no stone unturned, ensuring your space is pristine.
               </div>
             </div>
             <div className="w-full mb-5 md:mb-0">
               <Image src="/thumb-06.png" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
-              <div className="min-h-[150px]">
+              <div className="min-h-[150px] text-left text-lg">
                 <div className="font-bold my-5">Moving (In/Out) Cleaning</div>
                 Our Moving Cleaning service specializes in meticulous move in/out cleanings, ensuring your former residence is left spotless and ready for its next occupants.
               </div>
