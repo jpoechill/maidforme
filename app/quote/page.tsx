@@ -95,7 +95,7 @@ export default function Home() {
             </div>
             <div className="text-left text-base font-light">
               {/* Allow us to get to know you so we can precisely meet your needs!  */}
-              Please share some information about your requirements and preferences. For general rates, check out our <Link href="https://www.maidforme.co/pricing">General Rates</Link> page.
+              Please share some information about your requirements and preferences. For general rates, check out our <Link href="https://www.maidforme.co/rates">General Rates</Link> page.
               <br /><br />
               {/* <br></br><br />
               We look forward to assisting you! */}
