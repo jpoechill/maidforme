@@ -50,13 +50,13 @@ export default function Home() {
               Testimonials
             </Link>
           </div>
-          {/* <div>
+          <div>
             <Link href="/quote">
               <button className="transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6">
                 Request a Quote
               </button>
             </Link>
-          </div> */}
+          </div>
         </div>
         <div className="cursor-pointer lg:hidden p-5 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
           {
@@ -98,11 +98,11 @@ export default function Home() {
                 Testimonials
               </Link>
             </div>
-            {/* <Link href="/quote">
+            <Link href="/quote">
               <button className="mt-6 p-5 transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6">
                 Request a Quote
               </button>
-            </Link> */}
+            </Link>
           </div>
         </div>
       }

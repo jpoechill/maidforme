@@ -66,7 +66,7 @@ export default function Home() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (form.current) {
-      emailjs.sendForm('service_f6v1078', 'template_du93o8p', form.current, '9_1cvi1qcNyiNlqSo')
+      emailjs.sendForm('service_f6v1078', 'template_xqx9ueu', form.current, '9_1cvi1qcNyiNlqSo')
         .then((result) => {
           console.log(result.text);
         }, (error) => {
@@ -87,20 +87,21 @@ export default function Home() {
 
       <div className="animate-[fade-me-in_.5s_ease-in-out] snap-center text-center bg-[#e6f6ff] pt-[100px] bg-repeat-custom  flex md:px-5 pb-[50px] justify-center">
         <div id="contact-us" className="py-5 lg:min-w-[1200px]">
-          <div className="p-5 md:p-20 md:py-[40px] bg-[#fff4fd] shadow-lg md:rounded-2xl max-w-[800px] lg:max-w-[1200px]">
-            <div className="text-left p-0 mb-2">
-              <h1>
-                Request a Quote
-              </h1>
-            </div>
-            <div className="text-left text-base font-light">
-              {/* Allow us to get to know you so we can precisely meet your needs!  */}
-              Please share some information about your requirements and preferences. For general rates, check out our <Link href="https://www.maidforme.co/rates">General Rates</Link> page.
-              <br /><br />
-              {/* <br></br><br />
+
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="p-5 md:p-20 md:py-[40px] bg-[#fff4fd] shadow-lg md:rounded-2xl max-w-[800px] lg:max-w-[1200px]">
+              <div className="text-left p-0 mb-2">
+                <h1>
+                  Request a Quote
+                </h1>
+              </div>
+              <div className="text-left text-base font-light">
+                {/* Allow us to get to know you so we can precisely meet your needs!  */}
+                Please share some information about your requirements and preferences. For general rates, check out our <Link href="https://www.maidforme.co/rates">General Rates</Link> page.
+                <br /><br />
+                {/* <br></br><br />
               We look forward to assisting you! */}
-            </div>
-            <form ref={form} onSubmit={sendEmail}>
+              </div>
               <div className="text-md font-bold mt-0 pb-0 lg:pb-0 text-left">
                 <div className="w-full font-normal text-right text-xs text-gray-400 mb-2">Expand All [+]</div>
 
@@ -121,71 +122,71 @@ export default function Home() {
                   <div className="flex flex-col font-bold md:flex-row gap-5 ">
                     <div className="w-full">
                       Name<span className="text-[#C41C94]">*</span> <br />
-                      <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Jane Smith" />
+                      <input type="text" name="full_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Jane Smith" />
                     </div>
                     <div className="w-full">
                       Email/Phone<span className="text-[#C41C94]">*</span> <br />
-                      <input type="text" name="user_phone" className="px-5 py-3 font-light rounded-full mt-2 w-full" placeholder="email@gmail.com" /> <br /><br />
+                      <input type="text" name="email" className="px-5 py-3 font-light rounded-full mt-2 w-full" placeholder="email@gmail.com" /> <br /><br />
                     </div>
                   </div>
 
                   Can you provide the address (or location) of the property to be cleaned?
-                  <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="An address to your location or property..." />
+                  <input type="text" name="location" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="An address to your location or property..." />
                   <br /><br />
 
 
                   <div className="flex flex-col md:flex-row gap-5 mb-5">
                     <div className="w-full">
                       What is the nature of this property?
-                      <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
-                        <option value="" selected>Residential</option>
-                        <option value="">Office</option>
-                        <option value="">Commercial</option>
+                      <select name="nature" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
+                        <option value="Residential" selected>Residential</option>
+                        <option value="Office">Office</option>
+                        <option value="Commercial">Commercial</option>
                       </select>
                     </div>
                     <div className="w-full">
                       How often do you require cleaning services?
-                      <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
-                        <option value="">Weekly</option>
-                        <option value="" selected>Bi-weekly</option>
-                        <option value="">Monthly</option>
-                        <option value="">One-time</option>
+                      <select name="interval" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
+                        <option value="Weekly">Weekly</option>
+                        <option value="Bi-weekly" selected>Bi-weekly</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="One-time">One-time</option>
                       </select>
                     </div>
                   </div>
 
                   Do you require an additional deep cleaning?
-                  <select name="discovery" id="" className="mt-2 mb-6 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
-                    <option value=""></option>
-                    <option value="">No</option>
-                    <option value="">Yes</option>
+                  <select name="deep_cleaning" id="" className="mt-2 mb-6 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
+                    <option value="None"></option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
                   </select>
 
                   <div className="flex flex-col md:flex-row gap-5 mb-6">
                     <div className="w-full">
                       What is the size of the property in square footage? <br />
-                      <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
-                        <option value="">500 sq. ft</option>
-                        <option value="">1000 sq. ft</option>
-                        <option value="" selected>1500 sq. ft</option>
-                        <option value="">2000 sq. ft</option>
-                        <option value="">3000 sq. ft</option>
-                        <option value="">4000 sq. ft</option>
-                        <option value="">5000+ sq. ft</option>
+                      <select name="sq_ft" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
+                        <option value="500">500 sq. ft</option>
+                        <option value="1000">1000 sq. ft</option>
+                        <option value="1500" selected>1500 sq. ft</option>
+                        <option value="2000">2000 sq. ft</option>
+                        <option value="3000">3000 sq. ft</option>
+                        <option value="4000">4000 sq. ft</option>
+                        <option value="5000">5000+ sq. ft</option>
                       </select>
                     </div>
                     <div className="w-full">
                       How many rooms does the property have? <br />
-                      <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
-                        <option value=""></option>
-                        <option value="">Studio</option>
-                        <option value="">0</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                        <option value="">More than 5</option>
+                      <select name="num_rooms" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
+                        <option value="N/A"></option>
+                        <option value="Studio">Studio</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="More than 5">More than 5</option>
                       </select></div>
                   </div>
 
@@ -215,32 +216,32 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <input type="checkbox" className="mr-3" name="" id="kitchen" />
+                      <input type="checkbox" className="mr-3" name="kitchen" id="kitchen" />
                       <label htmlFor="kitchen">Kitchen</label>
                     </div>
 
                     <div>
-                      <input type="checkbox" className="mr-3" name="" id="livingarea" />
+                      <input type="checkbox" className="mr-3" name="livingarea" id="livingarea" />
                       <label htmlFor="livingarea">Living Area</label>
                     </div>
 
                     <div>
-                      <input type="checkbox" className="mr-3" name="" id="bedrooms" />
+                      <input type="checkbox" className="mr-3" name="bedrooms" id="bedrooms" />
                       <label htmlFor="bedrooms">Bedrooms</label>
                     </div>
 
                     <div>
-                      <input type="checkbox" className="mr-3" name="" id="officespace" />
+                      <input type="checkbox" className="mr-3" name="officespace" id="officespace" />
                       <label htmlFor="officespace">Office Spaces</label>
                     </div>
 
                   </div>
 
-                  <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Other specific areas that may need cleaning..." />
+                  <input type="text" name="other_areas" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Other specific areas that may need cleaning..." />
                   <br /><br />
 
                   Are there any areas or items that require special attention or are off-limits?
-                  <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Areas that require special attention or may be off limits..." />
+                  <input type="text" name="areas_off_limit" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Areas that require special attention or may be off limits..." />
                   <br /><br />
                 </div>
                 {/* } */}
@@ -261,33 +262,33 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row gap-5 mb-2">
                     <div className="w-full">
                       What are the preferred days for cleaning?
-                      <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
-                        <option value="" selected>Weekdays</option>
-                        <option value="">Weekends</option>
+                      <select name="preferred_days" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
+                        <option value="Weekdays" selected>Weekdays</option>
+                        <option value="Weekends">Weekends</option>
                         <option disabled>_________</option>
-                        <option value="">Mondays</option>
-                        <option value="">Tuesdays</option>
-                        <option value="">Wednesdays</option>
-                        <option value="">Thursdays</option>
-                        <option value="">Fridays</option>
-                        <option value="">Saturdays</option>
+                        <option value="Mondays">Mondays</option>
+                        <option value="Tuesdays">Tuesdays</option>
+                        <option value="Wednesdays">Wednesdays</option>
+                        <option value="Thursdays">Thursdays</option>
+                        <option value="Fridays">Fridays</option>
+                        <option value="Saturdays">Saturdays</option>
                         <option disabled>_________</option>
-                        <option value="">Any</option>
+                        <option value="Any">Any</option>
                       </select>
                     </div>
                     <div className="w-full">
                       What are the preferred times for cleaning?
-                      <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
-                        <option value="">Mornings</option>
-                        <option value="">Afternoons</option>
-                        <option value="">Evenings</option>
+                      <select name="preferred_times" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent font-normal px-3">
+                        <option value="Mornings">Mornings</option>
+                        <option value="Afternoons">Afternoons</option>
+                        <option value="Evenings">Evenings</option>
                       </select></div>
                   </div>
 
                   <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-1 mb-4 w-full" placeholder="Any specific days or times not mentioned above..." />
 
                   Will someone be present during the cleaning, or will you provide keys/access codes?
-                  <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Keys and access codes will be provided..." />
+                  <input type="text" name="access_codes" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Keys and access codes will be provided..." />
                   <br /><br />
 
                   {/* Are there any security systems or pets we need to be aware of?
@@ -313,12 +314,12 @@ export default function Home() {
                   <div>
                     Are there any priority tasks or areas for you?
                   </div>
-                  <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Areas that require special attention..." />
+                  <input type="text" name="priority_tasks" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Areas that require special attention..." />
                   <br /><br />
                   <div className="">
                     Are there any other additional services required, not previously mentioned?
                   </div>
-                  <input type="text" name="user_name" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Any additional services or details..." />
+                  <input type="text" name="other_reqs" className="px-4 py-3 font-light rounded-full mt-2 w-full" placeholder="Any additional services or details..." />
                   <br /><br />
 
                 </div>
@@ -354,7 +355,7 @@ export default function Home() {
                     <div className="w-full">
                       <div className="w-full">
                         How did you hear about us? <br />
-                        <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent px-3">
+                        <select name="referred_by" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent px-3">
                           <option value="Blank"></option>
                           <option value="Instagram">Instagram</option>
                           <option value="Facebook">Facebook</option>
@@ -366,7 +367,7 @@ export default function Home() {
                     </div>
                     <div className="w-full">
                       Can we share photos of your space on social media?
-                      <select name="discovery" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent px-3">
+                      <select name="permission" id="" className="mt-2 p-3 w-full rounded-xl border-r-[15px] border-transparent px-3">
                         <option value="Blank"></option>
                         <option value="No">No</option>
                         <option value="Yes">Yes</option>
@@ -382,17 +383,18 @@ export default function Home() {
 
               </div>
 
-            </form>
-          </div>
-          <div className="text-sm font-normal mt-6 text-center w-full">
-            The information sent through this online form is NOT secure.
-            If you would like to discuss any related matter in private, please contact us directly.
-          </div>
+            </div>
+            <div className="text-sm font-normal mt-6 text-center w-full">
+              The information sent through this online form is NOT secure.
+              If you would like to discuss any related matter in private, please contact us directly.
+            </div>
 
 
-          <button className="mt-6 py-3 font-medium transition-all ease-in-out duration-200 shadow-md hover:shadow-2xl border-0 bg-[#c41c94] hover:bg-[#ffade8] w-full text-white rounded-full p-2 px-6">
-            Complete Questionnaire
-          </button>
+            <button type="submit" className="mt-6 py-3 font-medium transition-all ease-in-out duration-200 shadow-md hover:shadow-2xl border-0 bg-[#c41c94] hover:bg-[#ffade8] w-full text-white rounded-full p-2 px-6">
+              Complete Questionnaire
+            </button>
+
+          </form>
         </div>
       </div>
 

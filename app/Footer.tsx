@@ -58,9 +58,9 @@ export default function Home() {
               <Link href="/testimonials">
                 Testimonials
               </Link>
-              {/* <Link href="/quote">
+              <Link href="/quote">
                 Request a Quote
-              </Link> */}
+              </Link>
             </div>
           </div>
           <div className="mt-8">
