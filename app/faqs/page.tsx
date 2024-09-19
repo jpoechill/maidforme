@@ -57,7 +57,7 @@ export default function Home() {
               <div id="answer3" className="text-lg">
                 Our pricing depends on the size of your home, the type of cleaning service required, and any additional requests. We offer customized quotes tailored to your specific needs.
                 <br /><br />
-                A general pricing guide can be found here: <Link href="https://www.maidforme.co/pricing">Pricing Guide</Link>
+                A general pricing guide can be found here: <Link href="https://www.maidforme.co/rates">Pricing Guide</Link>
 
               </div>
             </div>

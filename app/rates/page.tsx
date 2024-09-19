@@ -30,8 +30,9 @@ export default function Home() {
           </div> */}
 
           {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, repellendus. */}
+          <Image src="/pricing_mobile.svg" className="md:hidden pt-0 shadow-xl w-full mx-auto max-w-[800px] mb-2" alt="Pricing" width={1800} height={200}></Image>
 
-          <Image src="/pricing_desktop.svg" className="pt-0 shadow-xl w-full mx-auto max-w-[800px] mb-2" alt="Pricing" width={1800} height={200}></Image>
+          <Image src="/pricing_desktop.svg" className="hidden md:block pt-0 shadow-xl w-full mx-auto max-w-[800px] mb-2" alt="Pricing" width={1800} height={200}></Image>
           <br />
           Prices subject to change.
         </div>
