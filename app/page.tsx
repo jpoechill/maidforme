@@ -346,7 +346,7 @@ export default function Home() {
                     <label className="cursor-pointer" htmlFor="deep_cleaning"> Deep Cleaning</label>
                   </div>
                 </div> */}
-                <button className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full shadow-md text-white rounded-2xl p-3 mt-0">
+                <button type="submit" className="transition-all bg-[#C41C94] hover:bg-[#ffade8] hover:shadow-2xl w-full shadow-md text-white rounded-2xl p-3 mt-0">
                   Let&apos;s talk!
                 </button>
               </div>

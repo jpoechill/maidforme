@@ -51,9 +51,15 @@ export default function Home() {
             </Link>
           </div>
           <div>
-            <Link href="/quote">
+            <Link className="hover:cursor-pointer" href="/quote">
+              Quotes
+            </Link>
+          </div>
+          <div>
+            <Link href="/hiring">
               <button className="transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6">
-                Request a Quote
+                {/* Request a Quote */}
+                We&apos;re Hiring!
               </button>
             </Link>
           </div>
@@ -93,14 +99,20 @@ export default function Home() {
                 Gallery
               </Link>
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-0  hover:underline cursor-pointer">
+            <div onClick={() => { setShowMenu(false) }} className="w-100  pb-5 border-b-2 hover:underline cursor-pointer">
               <Link href="/testimonials">
                 Testimonials
               </Link>
             </div>
-            <Link href="/quote">
-              <button className="mt-6 p-5 transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6">
+            <br />
+            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-0  hover:underline cursor-pointer">
+              <Link href="/testimonials">
                 Request a Quote
+              </Link>
+            </div>
+            <Link href="/hiring">
+              <button className="mt-6 p-5 transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6">
+                We&apos;re Hiring!
               </button>
             </Link>
           </div>
