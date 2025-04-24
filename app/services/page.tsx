@@ -31,7 +31,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 lg:flex-row gap-[20px] max-w-[1000px] mx-auto lg:gap-[50px] w-full lg:mt-10">
             <div className="w-full mb-5 md:mb-0">
-              <Image src="/thumb-05.png" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
+              <Image src="/thumb-08.jpg" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
               <div className="min-h-[150px] text-left text-lg">
                 <div className="font-bold my-5">Commercial Cleaning</div>
                 Our Commercial Cleaning service ensures a spotless, well-maintained business environment. We use eco-friendly products and advanced cleaning techniques for optimal results.
@@ -45,7 +45,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full mb-5 md:mb-0">
-              <Image src="/thumb-03.png" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
+              <Image src="/thumb-09.jpg" className="rounded-xl w-full" alt="thumb" width="400" height="400" />
               <div className="min-h-[150px] text-left text-lg">
                 <div className="font-bold my-5">Deep Cleaning</div>
                 Our Deep Cleaning service goes beyond the surface, targeting hard-to-reach areas for a comprehensive clean. We leave no stone unturned, ensuring your space is pristine.

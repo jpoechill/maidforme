@@ -50,8 +50,18 @@ export default function Home() {
       <Sticky />
       <div className="animate-[fade-me-in_.5s_ease-in-out] snap-center video-container min-h-screen mt-00 bg-repeat-custom">
         {/* <video autoPlay muted loop> */}
-        <Image src="/cover_03.jpg" className="hidden lg:block w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
-        <Image src="/cover_03_mobile.jpg" className="lg:hidden w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
+        {/* <Image src="/cover_03.jpg" className="hidden lg:block w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image>
+        <Image src="/cover_03_mobile.jpg" className="lg:hidden w-full h-screen absolute index-0 object-cover bg-cover bg-no-repeat" alt="logo" width={2380} height={10}></Image> */}
+
+        <video
+          src="/video/mfm_walkthrough_tall.mp4"
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10`}
+          autoPlay
+          loop
+          muted
+          playsInline
+        // onCanPlayThrough={() => { alert('123') }}
+        />
 
         {/* width: 100%;
   height: 100%;
@@ -61,30 +71,21 @@ export default function Home() {
         {/* <source src="vaccuum.mov" type="video/mp4" /> */}
         {/* </video> */}
         <div className="caption h-full text-white">
-          <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col justify-end pb-10">
-            <div className="lg:w-fit bg-[#fff5fe] w-full border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
-              <div>
-                <h1 className="lg:text-left  text-center text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal text-[#C41C94] lg:text-[40px]">
-                  Sparkling Clean, <br className="lg:hidden" />
-                  Every Time! ✨
-                </h1>
-                {/* <h1 className="text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal lg:text-[40px]">
-                  Professional Cleaning Solutions
-                </h1> */}
-                {/* <h1 className="t lg:hidden">
-                  Professional Cleaning Solutions
-                </h1> */}
-              </div>
-              {/* <div className="pt-2 lg:pt-4 text-lg">
-                Experience top-notch dusting, sanitizing, and vacuuming services with our professional cleaning team.
-              </div> */}
-            </div>
+          <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col items-center justify-center pb-0 mt-8">
+            <div className="lg:max-w-[50%] bg-[#fff5fe]  text-center border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
 
-            {/* <div>
-              <button className="bg-[#fff5fe] rounded p-3 px-5 mt-4">
-                <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer text-[#C41C94] font-medium">Contact Us</span>
+              <h1 className="lg:text-center w-full text-center mb-4 text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal text-[#C41C94] lg:text-[40px]">
+                ✨ A Home You&apos;ll <br /> Love Coming Back To ✨
+              </h1>
+              At Maid for Me, we bring <b>comfort</b>, <b>clarity</b>, and <b>calm</b> to your living space. Whether it’s routine upkeep or a deep clean, our dedicated team delivers spotless results with <b>care</b> and <b>consistency</b>.
+              <br /><br />
+              <i>
+                Because you deserve more than just a clean home—you deserve a refreshed start every time you walk through the door.
+              </i>
+              <button className="bg-[#C41C94] w-full text-white rounded p-3 px-5 mt-6">
+                <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer font-medium">Get a Free Quote.</span>
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +95,7 @@ export default function Home() {
       <div id="about-us" className="flex min-h-[700px] w-full bg-[#f3fafb] justify-center py-[120px] px-5 md:px-10 lg:px-20 items-center">
         <div className="max-w-[1200px] gap-10 w-full flex flex-col lg:flex-row">
           <div id="about-us-mobile" className="pt-5 justify-center">
-            <Image src="/thumb-04.png" className="rounded-xl lg:min-w-[500px]" alt="logo" width={580} height={10}></Image>
+            <Image src="/thumb-07.jpg" className="rounded-xl lg:min-w-[500px]" alt="logo" width={580} height={10}></Image>
           </div>
           <div className="col-span-6 lg:col-span-4 flex flex-row text-left items-center">
             <div className="">
