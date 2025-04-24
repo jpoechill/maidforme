@@ -75,7 +75,7 @@ export default function Home() {
             <div className="lg:max-w-[50%] bg-[#fff5fe]  text-center border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
 
               <h1 className="lg:text-center w-full text-center mb-4 text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal text-[#C41C94] lg:text-[40px]">
-                ✨ A Home You&apos;ll <br /> Love Coming Back To ✨
+                A ✨ Home  ✨ You&apos;ll <br /> Love Coming Back To
               </h1>
               At Maid for Me, we bring <b>comfort</b>, <b>clarity</b>, and <b>calm</b> to your living space. Whether it’s routine upkeep or a deep clean, our dedicated team delivers spotless results with <b>care</b> and <b>consistency</b>.
               <br /><br />
