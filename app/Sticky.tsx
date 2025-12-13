@@ -17,8 +17,8 @@ export default function Sticky() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div>
-      <div className="fixed bg-[#fff5fe] w-full z-10 text-black px-5 md:px-10 py-6 top-0 flex flex-row items-center justify-between h-[80px]">
+    <div className="fixed bg-[#fff5fe] w-full z-10">
+      <div className="max-w-[1200px] mx-auto text-black px-5 md:px-10 py-6 top-0 flex flex-row items-center justify-between h-[80px]">
         <div>
           <Image
             onClick={() => scrolltoHash('top')}

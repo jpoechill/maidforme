@@ -17,7 +17,7 @@ export default function Home() {
   return (
 
     <div className="snap-center bg-[#fff5fe] text-black text-[16px] py-12 lg:py-15 px-5 md:px-10">
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-6 gap-4 max-w-[1200px] mx-auto">
         <div className="col-span-6 lg:col-span-3 mb-5">
 
           <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-3" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
@@ -92,9 +92,9 @@ export default function Home() {
         </div> */}
 
       </div >
-      <div className="mt-10 pt-10 md:mb-20 flex-col gap-5 md:flex-row font-light lg:mb-0 text-sm flex justify-between">
+      <div className="mt-10 pt-10 max-w-[1200px] mx-auto md:mb-20 flex-col gap-5 md:flex-row font-light lg:mb-0 text-sm flex justify-between">
         <div className="font-light">
-          2024 © Maid For Me. All rights reserved.
+          2026 © Maid For Me. All rights reserved.
         </div>
       </div>
     </div >

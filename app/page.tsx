@@ -369,32 +369,45 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* LOCATION */}
-      <div id="location" className="snap-center bg-repeat-custom text-center flex flex-col md:flex-row py-[120px] justify-center">
-        <div className="py-10 w-full flex gap-10 px-10 flex-col md:flex-row">
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <div id="location-mobile" className="rounded-2xl max-w-[600px] overflow-hidden shadow-xl border">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus" width={400} className=" md:max-w-[450px] md:max-h-[450px]" height={450} loading="lazy"></iframe>
+      <div
+        id="location"
+        className="snap-center bg-repeat-custom py-[120px] flex justify-center"
+      >
+        {/* CONTENT WRAPPER */}
+        <div className="w-full max-w-[1200px] px-6 md:px-10">
+          <div className="flex flex-col md:flex-row gap-10 items-stretch">
+
+            {/* MAP — FULL 50% */}
+            <div className="w-full md:w-2/3">
+              <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100878.24803177382!2d-122.39450528438896!3d37.80308439911126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9b5ea6210a07%3A0xa2950f4ff149c910!2sSan%20Francisco%20Bay!5e0!3m2!1sen!2sus!4v1711602621487!5m2!1sen!2sus"
+                  className="w-full h-[450px] md:h-full"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-center pt-5 md:pt-20 lg:pt-0 p-0 md:p-10 md:justify-left text-left">
-            <div className="max-w-[500px] leading-7 text-lg">
-              <span>
-                <h1>
+
+            {/* TEXT — FULL 50% */}
+            <div className="w-full md:w-1/2 flex items-center">
+              <div className="w-full text-left text-lg leading-7">
+                <h1 className="text-2xl font-semibold mb-4">
                   Find Us Here!
                 </h1>
-              </span>
-              <br /><br />
-              Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area.
-              <br /><br />
-              Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection.
-              <br /><br />
-              Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!
+
+                Elevate your home&apos;s cleanliness with our specialized cleaning services tailored for the vibrant San Francisco Bay Area.
+                <br /><br />
+                Our experienced team employs eco-friendly products and meticulous techniques to ensure your space shines with pristine perfection.
+                <br /><br />
+                Let us handle the cleaning, so you can fully embrace the beauty and energy of Bay Area living!
+              </div>
             </div>
+
           </div>
         </div>
       </div>
+
 
       {/* FAQs (MOVED DOWN HERE — LAST SECTION BEFORE CONTACT) */}
       <div id="faqs" className="snap-center text-center flex px-5 pt-[80px] md:px-20 pb-7 justify-center bg-[#f3fafb]">
