@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 
-export default function Home() {
+export default function Sticky() {
   const scrolltoHash = function (element_id: string) {
     const yOffset = -80;
     const element = document.getElementById(element_id)!;
@@ -20,48 +20,43 @@ export default function Home() {
     <div>
       <div className="fixed bg-[#fff5fe] w-full z-10 text-black px-5 md:px-10 py-6 top-0 flex flex-row items-center justify-between h-[80px]">
         <div>
-          <Link href="/">
-            <Image className="cursor-pointer mb-1" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
-          </Link>
+          <Image
+            onClick={() => scrolltoHash('top')}
+            className="cursor-pointer mb-1"
+            src="/maidforme.png"
+            alt="logo"
+            width={220}
+            height={60}
+          ></Image>
         </div>
         <div className="hidden lg:flex flex-row text-[16px] text-[#C41C94] items-center font-medium gap-10">
           <div>
-            <Link className="hover:cursor-pointer" href="/">
+            <span onClick={() => scrolltoHash('about-us')} className="hover:underline cursor-pointer">
               About
-            </Link>
+            </span>
           </div>
           <div>
-            <Link className="hover:cursor-pointer" href="/services">
+            <span onClick={() => scrolltoHash('services')} className="hover:underline cursor-pointer">
               Services
-            </Link>
+            </span>
           </div>
           <div>
-            <Link className="hover:cursor-pointer" href="/faqs">
+            <span onClick={() => scrolltoHash('faqs')} className="hover:underline cursor-pointer">
               FAQs
-            </Link>
+            </span>
           </div>
           <div>
-            <Link className="hover:cursor-pointer" href="/gallery">
-              Gallery
-            </Link>
-          </div>
-          <div>
-            <Link className="hover:cursor-pointer" href="/testimonials">
+            <span onClick={() => scrolltoHash('testimonials')} className="hover:underline cursor-pointer">
               Testimonials
-            </Link>
+            </span>
           </div>
           <div>
-            <Link className="hover:cursor-pointer" href="/quote">
-              Quotes
-            </Link>
-          </div>
-          <div>
-            <Link href="/hiring">
-              <button className="transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6">
-                {/* Request a Quote */}
-                We&apos;re Hiring!
-              </button>
-            </Link>
+            <button
+              onClick={() => scrolltoHash('contact-us')}
+              className="transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6"
+            >
+              Free Quotes
+            </button>
           </div>
         </div>
         <div className="cursor-pointer lg:hidden p-5 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
@@ -79,42 +74,25 @@ export default function Home() {
         showMenu &&
         <div className="fixed lg:hidden shadow-2xl pt-[100px] pb-[30px] px-10 z-[2]  w-full  bg-[#fbfefe]">
           <div className="flex flex-col text-[16px] text-[#C41C94] font-medium gap-0 mt-1 lg:mt-2">
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
-              <Link href="/">
-                About
-              </Link>
+            <div onClick={() => { scrolltoHash('about-us'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              About
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
-              <Link href="/services">
-                Services
-              </Link>
+            <div onClick={() => { scrolltoHash('services'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              Services
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
-              <Link href="/faqs">
-                FAQs
-              </Link>
+            <div onClick={() => { scrolltoHash('faqs'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              FAQs
             </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-5 border-b-2">
-              <Link href="/gallery">
-                Gallery
-              </Link>
-            </div> <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100  pb-5 border-b-2 hover:underline cursor-pointer">
-              <Link href="/testimonials">
-                Testimonials
-              </Link>
+            <div onClick={() => { scrolltoHash('testimonials'); setShowMenu(false) }} className="w-100 pb-5 border-b-2 hover:underline cursor-pointer">
+              Testimonials
             </div>
             <br />
-            <div onClick={() => { setShowMenu(false) }} className="w-100 pb-0  hover:underline cursor-pointer">
-              <Link href="/testimonials">
-                Request a Quote
-              </Link>
-            </div>
-            <Link href="/hiring">
-              <button className="mt-6 p-5 transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6">
-                We&apos;re Hiring!
-              </button>
-            </Link>
+            <button
+              onClick={() => { scrolltoHash('contact-us'); setShowMenu(false) }}
+              className="mt-6 p-5 transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,1)] css-selector bg-[#C41C94] w-full text-white rounded-2xl p-2 px-6"
+            >
+              Free Quotes
+            </button>
           </div>
         </div>
       }
