@@ -72,22 +72,31 @@ export default function Home() {
         {/* </video> */}
         <div className="caption h-full text-white">
           <div className="h-full px-5 md:px-10 lg:px-20 flex flex-col items-center justify-center pb-0 mt-8">
-            <div className="lg:max-w-[50%] bg-[#fff5fe]  text-center border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
+            <div className="lg:max-w-[50%] bg-[#fff5fe] text-center border-[#f0f0f0] border shadow-lg rounded-2xl p-4 px-8 pb-8 text-[#111]">
 
               <h1 className="lg:text-center w-full text-center mb-4 text-[30px] leading-[40px] pt-0 lg:pt-2 lg:leading-normal text-[#C41C94] lg:text-[40px]">
-                A ✨ Home  ✨ You&apos;ll <br /> Love Coming Back To
+                Oakland Clean, Done Right.
               </h1>
-              At Maid for Me, we bring <b>comfort</b>, <b>clarity</b>, and <b>calm</b> to your living space. Whether it’s routine upkeep or a deep clean, our dedicated team delivers spotless results with <b>care</b> and <b>consistency</b>.
+
+              Maid for Me is proudly Oakland-based, delivering reliable, high-quality home cleaning with care and consistency.
+              Whether it’s weekly upkeep or a full reset, we make sure your space feels fresh the moment you walk in.
               <br /><br />
+
               <i>
-                Because you deserve more than just a clean home—you deserve a refreshed start every time you walk through the door.
+                Local team. Spotless results. Zero stress.
               </i>
-              <button className="bg-[#C41C94] w-full text-white rounded p-3 px-5 mt-6">
-                <span onClick={() => scrolltoHash('contact-us')} className="cursor-pointer font-medium">Get a Free Quote.</span>
+
+              <button
+                onClick={() => scrolltoHash('contact-us')}
+                className="bg-[#C41C94] w-full text-white rounded p-3 px-5 mt-6 cursor-pointer font-medium"
+              >
+                Get a Free Quote
               </button>
+
             </div>
           </div>
         </div>
+
       </div>
 
 
