@@ -20,7 +20,7 @@ export default function Home() {
       <div className="grid grid-cols-6 gap-4 max-w-[1200px] mx-auto">
         <div className="col-span-6 lg:col-span-3 mb-5">
 
-          <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-3" src="/maidforme.png" alt="logo" width={220} height={60}></Image>
+            <Image onClick={() => scrolltoHash('top')} className="cursor-pointer mb-3" src="/maidforme.png" alt="Maid For Me" width={220} height={60}></Image>
           <span className="text-[16px] text-[#C41C94]">
             Sparkling cleanliness at your service, anytime, anywhere!
           </span>
@@ -34,7 +34,7 @@ export default function Home() {
             <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" /></svg>
           </div>
           <div className="flex flex-row gap-5 mt-3">
-            <Image className="cursor-pointer mt-3" src="/payment_logos.png" alt="logo" width={350} height={60}></Image>
+            <Image className="cursor-pointer mt-3" src="/payment_logos.png" alt="Accepted payment methods" width={350} height={60}></Image>
           </div>
         </div>
         <div className="lg:mt-0 col-span-6 w-full  lg:col-span-3 pr-10">
@@ -43,22 +43,22 @@ export default function Home() {
               Menu
             </span>
             <div className="mt-6 w-full grid grid-cols-2 gap-y-5 justify-between">
-              <Link href="/">
+              <Link href="/#about-us">
                 About
               </Link>
-              <Link href="/services">
+              <Link href="/#services">
                 Services
               </Link>
-              <Link href="/faqs">
+              <Link href="/#faqs">
                 FAQs
               </Link>
               <Link href="/gallery">
                 Gallery
               </Link>
-              <Link href="/testimonials">
+              <Link href="/#testimonials">
                 Testimonials
               </Link>
-              <Link href="/quote">
+              <Link href="/#contact-us">
                 Request a Quote
               </Link>
             </div>
@@ -68,11 +68,16 @@ export default function Home() {
               Contact
             </span>
             <div className="mt-6 w-full grid grid-cols-2 gap-y-5 justify-between">
-              <span className="text-[#C41C94]">hello@maidforme.co</span>
+              <a href="mailto:hello@maidforme.co" className="text-[#C41C94]">
+                hello@maidforme.co
+              </a>
               <Link href="tel:5106037272">
                 <span className="text-[#C41C94]">510-603-7272</span>
               </Link>
             </div>
+            <p className="mt-4 text-sm text-[#C41C94]/opacity-90">
+              Serving Oakland, Piedmont, San Francisco &amp; nearby Bay Area cities
+            </p>
           </div>
         </div>
         {/* <div className="mt-5 lg:mt-0 col-span-3 lg:col-span-1">

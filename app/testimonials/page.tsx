@@ -46,7 +46,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full bg-[white] border border-[#f1f1f1] rounded-xl transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,.15)]  text-base p-7 text-left">
-                For busy professionals like me, this cleaning service is a lifesaver. Trustworthy, reliable, and they always leave my home sparkling clean.
+                You&apos;re just amazing and I gotta tell people all the time you&apos;re like and it&apos;s not a downplay the service as you do for me. It&apos;s like I tell you, but like she&apos;s not even a luxury like you are a bill and when I say that you&apos;re a necessity like you&apos;re not a optional like you were literally a factored in cost in my monthly expenses and that&apos;s I just wanna let you know like how much I rely on you. I appreciate you and just to come home to see my home. In tiptop shape it&apos;s just fucking amazing girl. I love you. Thank you so much.
                 <div className="flex flex-row items-center mt-7">
                   <Image src="/avatars/male-02.jpeg" alt="" className="rounded-full" width={60} height={60} />
                   <div className="flex flex-col">

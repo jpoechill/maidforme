@@ -94,7 +94,7 @@ export default function Home() {
                 What areas do you service?
               </div>
               <div id="answer7" className="text-lg">
-                We currently provide cleaning services in the general San Francisco Bay Area. If you&apos;re unsure whether we cover your location, please feel free to contact us for clarification.
+                We are Oakland-based and regularly serve Oakland, Piedmont, San Francisco, and nearby East Bay and Bay Area cities. If you&apos;re unsure whether we cover your ZIP, call us at (510) 603-7272 or request a quote and we&apos;ll confirm.
               </div>
             </div>
 

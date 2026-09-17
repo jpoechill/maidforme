@@ -62,23 +62,32 @@ export default function Home() {
 
 
   const form = useRef<HTMLFormElement | null>(null)
+  const successCardRef = useRef<HTMLDivElement | null>(null);
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (form.current) {
-      emailjs.sendForm('service_f6v1078', 'template_xqx9ueu', form.current, '9_1cvi1qcNyiNlqSo')
-        .then((result) => {
-          console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
-        });
+    if (!form.current || formStatus === 'loading') return;
 
-      console.log(form.current);
-      alert('Message sent successfully!')
-      form.current.reset()
-      scrolltoHash('top')
-    }
+    setFormStatus('loading');
+
+    emailjs.sendForm('service_f6v1078', 'template_xqx9ueu', form.current, '9_1cvi1qcNyiNlqSo')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+
+    form.current.reset();
+    setFormStatus('success');
   };
+
+  useEffect(() => {
+    if (formStatus !== 'success') return;
+    requestAnimationFrame(() => {
+      successCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    });
+  }, [formStatus]);
 
   return (
     <main id="top" className="absolute top-0 w-full max-h-screen x-lg:snap-y x-lg:snap-mandatory" style={{ scrollBehavior: 'smooth' }}>
@@ -88,6 +97,35 @@ export default function Home() {
       <div className="animate-[fade-me-in_.5s_ease-in-out] snap-center text-center bg-[#e6f6ff] pt-[100px] bg-repeat-custom  flex md:px-5 pb-[50px] justify-center">
         <div id="contact-us" className="py-5 lg:min-w-[1200px]">
 
+          {formStatus === 'success' ? (
+            <div
+              ref={successCardRef}
+              className="mx-auto p-5 md:p-20 md:py-[60px] bg-[#fff4fd] shadow-lg md:rounded-2xl max-w-[800px] lg:max-w-[900px] flex flex-col items-center justify-center text-center animate-[fade-me-in_.4s_ease-in-out]"
+              role="status"
+              aria-live="polite"
+            >
+              <p className="uppercase font-bold text-sm tracking-wide text-[#C41C94] mb-3">
+                Quote request received
+              </p>
+              <h1 className="text-[#C41C94]">
+                Thank you — we&apos;ll follow up with your quote.
+              </h1>
+              <p className="mt-4 text-base font-light text-gray-700 max-w-xl leading-relaxed mx-auto">
+                We received your questionnaire and will get back to you shortly. Prefer to talk now? Call us at{" "}
+                <a href="tel:5106037272" className="font-medium">
+                  (510) 603-7272
+                </a>
+                .
+              </p>
+              <button
+                type="button"
+                onClick={() => setFormStatus('idle')}
+                className="mt-8 transition-all bg-white border border-[#f0f0f0] hover:border-[#C41C94] text-[#C41C94] rounded-full px-6 py-3 shadow-sm font-medium"
+              >
+                Submit another request
+              </button>
+            </div>
+          ) : (
           <form ref={form} onSubmit={sendEmail}>
             <div className="p-5 md:p-20 md:py-[40px] bg-[#fff4fd] shadow-lg md:rounded-2xl max-w-[800px] lg:max-w-[1200px]">
               <div className="text-left p-0 mb-2">
@@ -96,11 +134,8 @@ export default function Home() {
                 </h1>
               </div>
               <div className="text-left text-base font-light">
-                {/* Allow us to get to know you so we can precisely meet your needs!  */}
                 Please share some information about your requirements and preferences. For general rates, check out our <Link href="https://www.maidforme.co/rates">General Rates</Link> page.
                 <br /><br />
-                {/* <br></br><br />
-              We look forward to assisting you! */}
               </div>
               <div className="text-md font-bold mt-0 pb-0 lg:pb-0 text-left">
                 <div className="w-full font-normal text-right text-xs text-gray-400 mb-2">Expand All [+]</div>
@@ -389,12 +424,22 @@ export default function Home() {
               If you would like to discuss any related matter in private, please contact us directly.
             </div>
 
+            {formStatus === 'error' && (
+              <p className="mt-4 text-sm text-center text-red-700" role="alert">
+                Something went wrong. Please try again or call us at (510) 603-7272.
+              </p>
+            )}
 
-            <button type="submit" className="mt-6 py-3 font-medium transition-all ease-in-out duration-200 shadow-md hover:shadow-2xl border-0 bg-[#c41c94] hover:bg-[#ffade8] w-full text-white rounded-full p-2 px-6">
-              Complete Questionnaire
+            <button
+              type="submit"
+              disabled={formStatus === 'loading'}
+              className="mt-6 py-3 font-medium transition-all ease-in-out duration-200 shadow-md hover:shadow-2xl border-0 bg-[#c41c94] hover:bg-[#ffade8] w-full text-white rounded-full p-2 px-6 disabled:opacity-70 disabled:cursor-wait"
+            >
+              {formStatus === 'loading' ? 'Sending…' : 'Complete Questionnaire'}
             </button>
 
           </form>
+          )}
         </div>
       </div>
 
