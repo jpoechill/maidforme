@@ -235,10 +235,10 @@ export default function Home() {
               <div className="min-w-full bg-[white] border rounded-xl transition-all ease-in-out duration-500 shadow-[0_25px_50px_-12px_rgb(0,0,0,0.0)] hover:shadow-[0_10px_50px_-12px_rgb(0,0,0,.15)] text-base p-7 text-left">
                 Maid For Me has been an absolute lifesaver! Their attention to detail and thoroughness in cleaning our home is unmatched. We&apos;ve tried other cleaning services in the past, but Maid For Me truly stands out. Their professionalism and reliability make them our go-to choice every time.
                 <div className="flex flex-row items-center mt-7">
-                  <Image src="/avatars/female-01.jpeg" alt="Sarah M." className="rounded-full" width={60} height={60} />
+                  <Image src="/avatars/female-01.jpeg" alt="Jessica M." className="rounded-full" width={60} height={60} />
                   <div className="flex flex-col">
                     <span className="font-sans font-bold text-base pl-5">
-                      Sarah M.
+                      Jessica M.
                     </span>
                     <div className="font-sans font-extralight text-xs pl-5">
                       Oakland, CA

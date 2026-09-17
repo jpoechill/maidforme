@@ -37,7 +37,7 @@ export default function Home() {
                   <Image src="/avatars/female-01.jpeg" alt="" className="rounded-full" width={60} height={60} />
                   <div className="flex flex-col">
                     <span className="font-sans font-bold text-base pl-5">
-                      Sarah M.
+                      Jessica M.
                     </span>
                     <div className="font-sans font-extralight text-xs pl-5">
                       Oakland, CA
